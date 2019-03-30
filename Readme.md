@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Евгений Сухалинцев](https://up.htmlacademy.ru/adaptive/16/user/847405).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Рычагов](https://htmlacademy.ru/profile/id50483)
 
 ---
 
