@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
 
-  </body>
+<body>
+
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img src="http://placehold.it/150x100" width="150" height="100" alt="Pink Лого">
+    </a>
+    <nav class="main-nav">
+      <!--здесь будет меняться с "Открыть" на "Закрыть"-->
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--current">
+            <a>Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Pink - мобильное приложение для редактирования снимков</h1>
+    <section class="download">
+      <div class="download__wrapper">
+        <h2 class="visually-hidden">Загрузка приложения</h2>
+        <b class="download__slogan">Взгляните на жизнь иначе!</b>
+        <a class="download_button button" href="https://www.apple.com/itunes/" target="_blank">Скачать приложение</a>
+        <ul class="download__list">
+          <li class="download__item">
+            <a class="download__link download__link-ios" href="https://www.apple.com/itunes/" target="_blank" aria-label="App Store"></a>
+          </li>
+          <li class="download__item">
+            <a class="download__link download__link-android" href="https://play.google.com/store" target="_blank" aria-label="Google Play"></a>
+          </li>
+          <li class="download__item">
+            <a class="download__link download__link-windows" href="https://www.microsoft.com/ru-ru/store/b/home?rtc=1" target="_blank" aria-label="Windows Store"></a>
+          </li>
+        </ul>
+        <p class="download__info">Доступно для iPhone, iPad, Android, Windows Phoe, OS X, Windows 8</p>
+      </div>
+    </section>
+    <section class="features">
+      <div class="features__wrapper">
+        <h2 class="visually-hidden">Возможности приложения</h2>
+        <p class="features__slogan">Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
+        <ul class="features__list">
+          <li class="features__item features__item--mood">
+            <h3 class="feaures__title">Поднимает настроение</h3>
+            <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          <li class="features__item features__item--world">
+            <h3 class="feaures__title">Меняет мир вокруг</h3>
+            <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <li class="features__item features__item--friends">
+            <h3 class="feaures__title">Заводит новых друзей</h3>
+            <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+        </ul>
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Pink Preview">
+      </div>
+
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+
+</body>
+
 </html>
