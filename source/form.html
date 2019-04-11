@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
   <header class="page-header">
     <a class="page-header__logo">
-      <img src="http://placehold.it/150x100" width="150" height="100" alt="Pink Лого">
+      <img src="./img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
     </a>
     <nav class="main-nav">
       <!--здесь будет меняться с "Открыть" на "Закрыть"-->
@@ -50,17 +51,17 @@
           <input class="form__text" type="text" placeholder="Ну и отчество тоже" id="patronymic" name="patronymic">
           <fieldset class="form__group form__group--grey">
             <legend class="form__heading">Ваши безбашенные достижения в путешестсвии</legend>
-            <input class="form__checkbox" type="checkbox" checked id="selfie" name="selfie">
+            <input class="form__checkbox" type="checkbox" checked id="selfie" name="achievements[]" value="selfie with shark">
             <label class="form__label" for="selfie">Сделал селфи с акулой</label>
-            <input class="form__checkbox" type="checkbox" checked id="beach" name="beach">
+            <input class="form__checkbox" type="checkbox" checked id="beach" name="achievements[]" value="burnt on the beach">
             <label class="form__label" for="beach">Обгорел на пляже</label>
-            <input class="form__checkbox" type="checkbox" id="celebrity" name="celebrity">
+            <input class="form__checkbox" type="checkbox" id="celebrity" name="achievements[]" value="saw a celebrity">
             <label class="form__label" for="celebrity">Видел Чака Норриса</label>
-            <input class="form__checkbox" type="checkbox" id="souvenir" name="souvenir">
+            <input class="form__checkbox" type="checkbox" id="souvenir" name="achievements[]" value="bought souvenirs">
             <label class="form__label" for="souvenir">Накупил сувениров</label>
-            <input class="form__checkbox" type="checkbox" checked id="tower" name="hotel">
+            <input class="form__checkbox" type="checkbox" checked id="tower" name="achievements[]" value="kept the tower">
             <label class="form__label" for="tower">Удержал башню</label>
-            <input class="form__checkbox" type="checkbox" id="hotel" name="hotel">
+            <input class="form__checkbox" type="checkbox" id="hotel" name="achievements[]" value="trasher the hotel">
             <label class="form__label" for="hotel">Разгромил отель</label>
           </fieldset>
           <fieldset class="form__group">
@@ -92,7 +93,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrappper">
       <a href="index.html">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="На главную">
+        <img src="./img/logo-pink-blue-mobile.svg" width="147" height="41" alt="На главную">
       </a>
       <ul class="social__links">
         <li class="social__item">
@@ -108,7 +109,7 @@
       <div class="page-footer__developer developer">
         <p class="developer__text">Разработано</p>
         <a class="developer__link" href="https://up.htmlacademy.ru/adaptive/16">
-          <img src="http://placehold.it/150x100" width="25" height="25" alt="HTML и CSS, уровень 2">
+          <img src="./img/logo-htmlacademy.svg" width="27" height="35" alt="HTML и CSS, уровень 2">
         </a>
       </div>
     </div>
