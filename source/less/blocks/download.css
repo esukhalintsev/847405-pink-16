@@ -2,7 +2,7 @@
 .download {
   color: #ffffff;
   text-align: center;
-  background: url(../img/bg-back-mobile@1x.jpg) no-repeat;
+  background: url(../../img/bg-back-mobile@1x.jpg) no-repeat;
   background-size: cover;
   /*временно*/
 }
@@ -15,12 +15,12 @@
   color: #ffffff;
   max-width: 281px;
   font-size: 18px;
-  font-family: "opensans bold", arial, sans-serif;
+  font-family: "opensans bold", "Arial", sans-serif;
   line-height: 18px;
 }
 .download__info {
   padding: 29px 46px 35px 45px;
-  font-family: "opensans light", arial, sans-serif;
+  font-family: "opensans light", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
 }
