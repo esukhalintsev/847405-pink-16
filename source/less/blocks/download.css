@@ -15,12 +15,12 @@
   color: #ffffff;
   max-width: 281px;
   font-size: 18px;
-  font-family: "opensans bold";
+  font-family: "opensans bold", arial, sans-serif;
   line-height: 18px;
 }
 .download__info {
   padding: 29px 46px 35px 45px;
-  font-family: "opensans light";
+  font-family: "opensans light", arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
 }
