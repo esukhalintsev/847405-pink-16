@@ -16,7 +16,7 @@
   text-transform: uppercase;
 }
 .page-intro {
-  background: url("../../img/bg-back-mobile@1x.jpg") no-repeat;
+  background: url("../../source/img/bg-back-mobile@1x.jpg") no-repeat;
   background-size: cover;
   /*временно*/
 }
@@ -41,7 +41,7 @@
 .download {
   color: #ffffff;
   text-align: center;
-  background: url("../../img/bg-back-mobile@1x.jpg") no-repeat;
+  background: url("../../source/img/bg-back-mobile@1x.jpg") no-repeat;
   background-size: cover;
   /*временно*/
 }

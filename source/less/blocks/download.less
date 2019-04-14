@@ -1,29 +1,73 @@
-.download {
-  color: #ffffff;
-  text-align: center;
-  background: url("../../img/bg-back-mobile@1x.jpg") no-repeat;
-  background-size: cover;
-  /*временно*/
+.download__wrapper {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+    background: url("../../source/img/bg-back-mobile@1x.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*временно*/
+}
+
+.download__aside {
+    display: flex;
+    flex-direction: column;
+    background-color: @color-darkblue;
 }
 
 .download__slogan {
-  display: none;
+    display: none;
+    font-size: 50px;
+    font-family: "opensans light", "Arial", sans-serif;
+    font-weight: 300;
 }
 
 .download__button {
-  margin-top: 28px;
-  padding: 15px 39px 14px 39px;
-  color: #ffffff;
-  max-width: 281px;
-  font-size: 18px;
-  font-family: "opensans bold", "Arial", sans-serif;
-  line-height: 18px;
+    display: block;
+    margin-top: 28px;
+    margin: 0 auto;
+    padding: 15px 39px 14px 39px;
+    color: #ffffff;
+    max-width: 281px;
+    font-size: 18px;
+    font-family: "opensans bold", "Arial", sans-serif;
+    line-height: 18px;
 }
 
+.download__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.download__item {
+    margin: auto;
+}
 
 .download__info {
-  padding: 29px 46px 35px 45px;
-  font-family: "opensans light", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+    padding: 29px 46px 35px 45px;
+    font-family: "opensans light", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+    .download__wrapper {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .download__aside {
+        background-color: transparent;
+    }
+
+    .download__slogan {
+        display: block;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .download__slogan {
+        display: block;
+    }
 }
