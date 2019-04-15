@@ -6,6 +6,26 @@
   font-size: 14px;
 }
 
+.photos__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photos__item {
+  margin: 0 auto;
+  width: 300px;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: @color-grey;
+}
+
+.photos-day {
+  /*временно*/
+  width: 100%;
+}
+
 .photos__flag {
   padding: 10px;
   color: #ffffff;
@@ -13,12 +33,6 @@
   font-weight: bold;
   text-transform: uppercase;
   background-color: @color-red;
-}
-
-.photos__item {
-  margin-bottom: 20px;
-  text-align: left;
-  background-color: @color-grey;
 }
 
 .photos__title {
@@ -52,4 +66,11 @@
   font-size: 12px;
   color: @color-red;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .photos__list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
