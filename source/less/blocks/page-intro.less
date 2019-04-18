@@ -1,7 +1,9 @@
 .page-intro {
-  background: url("../../source/img/bg-back-mobile@1x.jpg") no-repeat;
+  min-height: 230px;
+  background-image: url("../../source/img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  /*временно*/
+  background-position: center;
 }
 
 .page-intro__title {
@@ -11,4 +13,21 @@
   font-family: "opensans light", "Arial", sans-serif;
   font-weight: normal;
   font-size: 24px;
+  text-align: center;
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-intro {
+    padding-top: 100px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .page-intro {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: top center;
+  }
 }
