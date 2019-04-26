@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  font-family: "opensans", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 32px;
   text-align: center;
@@ -21,6 +21,12 @@
   flex-direction: column;
   align-content: flex-start;
   width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: @color-darkblue;
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 66px;
 }
 
 .main-nav__toggle {
@@ -28,13 +34,29 @@
   margin-right: 20px;
   width: 50px;
   height: 24px;
-  background: url("../img/icon-menu-burger.svg") no-repeat;
+  background-color: @color-darkblue;
+  background-repeat: no-repeat;
   background-position: center;
   border: 0;
   align-self: flex-end;
   cursor: pointer;
 }
 
+.main-nav--opened {
+  background-color: @color-darkblue;
+  position: relative;
+
+  .main-nav__toggle {
+    background-image: url("../img/icon-menu-cross.svg");
+  }
+}
+
+.main-nav--closed {
+  .main-nav__toggle {
+    background-image: url("../img/icon-menu-burger.svg");
+  }
+
+}
 
 .main-nav__list {
   display: flex;
@@ -56,10 +78,11 @@
 
 .main-nav__link {
   color: #ffffff;
+  font-family: "Open Sans", "arial", sans-serif;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
 }
-
 
 .site-list__item {
   padding-top: 13px;
@@ -72,14 +95,47 @@
   }
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed {
+    .main-nav__list {
+      display: none;
+    }
+
+  }
+
+  .main-nav--opened {
+    .main-nav__list {
+      display: block;
+    }
+  }
+
+  .main-nav--nojs {
+    .main-nav__toggle {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    margin-top: 41px;
+  }
+
+  .main-nav {
+    min-height: 110px;
+  }
+}
+
 @media (min-width: @desktop-width) {
+
   .page-header {
     flex-direction: row;
     justify-content: flex-end;
   }
 
   .page-header__logo {
-    top: 41px;
+    top: 45px;
+    left: 200px; //временно
 
     &:hover path,
     &:focus path {
@@ -89,14 +145,6 @@
     &:active path {
       fill: @color-transparent;
     }
-  }
-
-  .main-nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: @color-darkblue;
-    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .main-nav__wrapper {
@@ -119,7 +167,7 @@
     padding-top: 39px;
     padding-bottom: 39px;
     border: 0;
-    margin-right: 81px;
+    margin-right: 73px;
 
     &:first-child {
       border: 0;

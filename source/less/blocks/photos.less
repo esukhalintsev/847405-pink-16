@@ -1,5 +1,5 @@
 .photos {
-  font-family: "opensans", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   color: @color-darkblue;
   line-height: 24px;
@@ -7,6 +7,9 @@
 }
 
 .photos__list {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -15,15 +18,25 @@
 
 .photos__item {
   margin: 0 auto;
-  width: 300px;
   margin-bottom: 20px;
   text-align: left;
   background-color: @color-grey;
 }
 
+.photos__info {
+  width: 280px;
+}
+
 .photos-day {
-  /*временно*/
-  width: 100%;
+  position: relative;
+}
+.test {
+  max-width: 340px;
+}
+.flag {
+  position: absolute;
+  top: 0;
+  right: 20px;
 }
 
 .photos__flag {
@@ -35,6 +48,7 @@
   background-color: @color-red;
 }
 
+
 .photos__title {
   padding-top: 56px;
   padding-bottom: 56px;
@@ -45,7 +59,7 @@
 .photos__author-name {
   padding-bottom: 19px;
   padding-left: 17px;
-  font-family: "opensans bold", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: bold;
 }
 

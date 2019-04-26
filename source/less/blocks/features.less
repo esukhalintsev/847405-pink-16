@@ -5,10 +5,13 @@
 
 .features__slogan {
   padding-top: 46px;
-  padding-bottom: 46px;
-  font-family: "opensans light", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 24px;
   background-color: #ffffff;
+}
+
+.features__slogan--answer {
+  padding-bottom: 40px;
 }
 
 .features__list {
@@ -18,61 +21,100 @@
   background-color: @color-grey;
   background-position: bottom center;
   background-size: 157px 300px;
-  min-height: 860px;
+  min-height: 770px;
+
 }
 
 .features__item {
-  margin: 0 auto;
-  /*временно*/
-  width: 310px;
+  max-width: 230px;
 }
 
 .features__title {
   padding-bottom: 20px;
-  font-family: "opensans bold", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   color: #000000;
 }
 
 .features__description {
   padding-bottom: 39px;
-  font-family: "opensans", "Arial", sans-serif;
+  font-size: 14px;
+  font-family: "Open Sans", "Arial", sans-serif;
 }
 
-
 .timer__aside {
-  width: 300px;
-  display: none;
-  padding-left: 300px;
-  padding-bottom: 100px;
-  background: url("../img/icon-timer.svg") no-repeat;
-  background-size: 208px 226px;
+  margin: 0 auto;
   text-align: left;
+  display: none;
+
+}
+
+.timer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 238px;
+  height: 276px;
+  margin-right: 67px;
+  background-image: url("../img/icon-timer.svg");
+  background-size: 238px 276px;
+  background-repeat: no-repeat;
 }
 
 .timer__title {
-  padding-top: 50px;
   margin-bottom: 10px;
-  font-family: "opensans bold", "arial", sans-serif;
+  font-family: "Open Sans", "arial", sans-serif;
   font-size: 30px;
   line-height: 36px;
 }
 
+.timer__value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  color: @color-red;
+  font-family: "Open Sans", "arial", sans-serif;
+  font-size: 96px;
+  line-height: 149.5px;
+  width: 202px;
+  height: 202px;
+  background-image: url(../img/icon-editor-diagram-fill.svg);
+  background-size: 202px 202px;
+  background-repeat: no-repeat;
+}
+
 .timer__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.timer__text {
   margin-bottom: 10px;
   max-width: 280px;
-  font-family: "opensans", "arial", sans-serif;
+  font-family: "Open Sans", "arial", sans-serif;
   font-size: 14px;
 }
 
 .timer__link {
   font-size: 14px;
-  font-family: "opensans", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   color: @color-red;
   text-decoration: underline;
 }
 
 @media (min-width: @tablet-width) {
+  .features__slogan {
+    padding-top: 220px;
+    font-size: 40px;
+    line-height: normal;
+  }
+
+  .features__slogan--answer {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+
   .features__list {
     padding-top: 75px;
     padding-left: 330px;
@@ -83,33 +125,112 @@
     background-size: 268px 507px;
   }
 
+  .features__title {
+    font-size: 24px;
+  }
+
   .timer__aside {
     margin: 0 auto;
-    display: block;
+    margin-top: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ffffff;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .timer__value {
+    margin-top: 36px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .features {
-    margin-top: 90px;
+    line-height: 30px;
   }
 
   .features__list {
+    padding-top: 0;
     padding-left: 0;
     background-image: none;
+    justify-content: center;
     flex-direction: row;
     text-align: center;
     min-height: 500px;
   }
 
+  .features__slogan {
+    padding-top: 62px;
+    font-size: 50px;
+  }
+
+  .features__slogan--answer {
+    padding-top: 0px;
+  }
+
+  .features__title {
+    padding-top: 99px;
+    padding-bottom: 26px;
+    font-size: 30px;
+  }
+
+  .features__description {
+    font-size: 18px;
+  }
+
   .timer__aside {
+    align-items: stretch;
+    margin: 0;
+    padding-top: 34px;
+    padding-bottom: 67px;
     width: 100%;
     background-color: @color-grey;
   }
 
+  .timer__description {
+    margin-right: 33px;
+  }
+
+  .timer__logo {
+    background-size: 298px 345px;
+    width: 298px;
+    height: 345px;
+  }
+
+  .timer__value {
+    font-size: 120px;
+    line-height: 187px;
+    font-weight: bold;
+    width: 258px;
+    height: 253px;
+    background-size: 258px 251px;
+    background-position: bottom left;
+  }
+
+  .timer__text,
+  .timer__link {
+    font-size: 18px;
+  }
+
+  .timer__text {
+    max-width: 540px;
+    margin-bottom: 28px;
+  }
+
+  .timer__title {
+    margin-top: 99px;
+    margin-bottom: 25px;
+  }
+
   .features__item {
-    padding-top: 320px;
+    padding-top: 265px;
+    margin-right: 81px;
+    max-width: 240px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .features__item--mood {
