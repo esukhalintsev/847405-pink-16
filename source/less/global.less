@@ -1,26 +1,26 @@
 @font-face {
-  font-family: "opensans";
+  font-family: "Open Sans";
   src:
-    url("fonts/opensans.woff2") format("woff2"),
-    url("fonts/opensans.woff") format("woff");
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "opensans bold";
+  font-family: "Open Sans";
   src:
-    url("fonts/opensansbold.woff2") format("woff2"),
-    url("fonts/opensansbold.woff") format("woff");
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
-  font-family: "opensans light";
+  font-family: "Open Sans";
   src:
-    url("fonts/opensanslight.woff2") format("woff2"),
-    url("fonts/opensanslight.woff") format("woff");
+    url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
   font-style: normal;
   font-weight: 300;
 }
@@ -45,7 +45,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 body {
-  text-align: center;
+  margin: 0 auto;
+  min-width: 320px;
   box-sizing: border-box;
 }
 
@@ -55,4 +56,14 @@ a {
 
 ul {
   list-style: none;
+}
+@media (min-width: @tablet-width) {
+  body {
+    width: 800px;
+  }
+}
+@media (min-width: @desktop-width) {
+  body {
+    width: 1200px;
+  }
 }
