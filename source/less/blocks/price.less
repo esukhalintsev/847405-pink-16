@@ -1,14 +1,24 @@
 .price {
+  padding-top: 100px;
   line-height: 30px;
   font-size: 14px;
   text-transform: uppercase;
+  background-image: url(../../img/bg-triangle-white.svg);
+  background-repeat: no-repeat;
+  background-position: 0% -1px;
+  background-size: 100%;
+  background-color: @color-grey;
 }
 
 .price__table {
   border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #ffffff;
 
-  td:not(:first-child) {
-    border: 2px solid #e5e5e5;
+  td {
+    &:not(:first-child) {
+      border: 2px solid #e5e5e5;
+    }
   }
 }
 
@@ -18,7 +28,7 @@
 
 .price__toggles {
   margin-top: 45px;
-  margin-bottom: 48px;
+  padding-bottom: 48px;
 }
 
 .price__category {
@@ -53,14 +63,8 @@
 @media (min-width: @tablet-width) {
   .price__wrapper {
     background-color: @color-grey;
-    padding-top: 80px;
     padding-bottom: 70px;
     margin-bottom: 56px;
-  }
-
-  .price__table {
-    margin: 0 auto;
-    background-color: #ffffff;
   }
 
   .price__attr {

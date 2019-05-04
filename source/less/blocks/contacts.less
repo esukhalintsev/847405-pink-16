@@ -1,8 +1,14 @@
 .contacts {
+  margin: 0 auto;
   font-family: "Open Sans", "arial", sans-serif;
   font-size: 24px;
   color: @color-darkblue;
-  margin: 0 auto;
+  /*
+  background-image: url(../../img/bg-triangle-white-footer.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-size: 100%;*/
+  background-color: #ffffff;
 }
 
 .contacts__wrapper {
@@ -12,6 +18,7 @@
 }
 
 .contacts__slogan {
+  padding-top: 30px;
   font-size: 24px;
   max-width: 239px;
   margin-bottom: 44px;
@@ -43,6 +50,7 @@
   }
 }
 
+
 @media (min-width: @tablet-width) {
   .contacts__slogan {
     font-size: 40px;
@@ -55,6 +63,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
   }
 
   .contacts__item {
