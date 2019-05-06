@@ -36,7 +36,7 @@
   margin: 0 auto;
   margin-bottom: 62px;
   border: none;
-  max-width: 86%; // ширина мобилы 320 - паддинги по 22
+  max-width: 86%; //
 }
 
 .personal-info__item,
@@ -54,6 +54,10 @@
   text-transform: uppercase;
 }
 
+.personal-info__label {
+  margin-top: 10px;
+}
+
 .personal-info__input,
 .contacts-info__input {
   height: 63px;
@@ -67,7 +71,6 @@
       "Arial",
       sans-serif;
     color: inherit;
-
   }
 }
 
@@ -106,7 +109,7 @@
 
 .adventures-info__input:checked + .adventures-info__label::before {
   background: url("../img/icon-checked.svg") no-repeat;
-  background-color: #fff;
+  background-color: #ffffff;
   background-position: center;
 }
 
@@ -134,7 +137,7 @@
   padding: 5px 10px 5px 89px;
 
   &::before {
-    border: none;
+    //border: none;
     content: "";
     position: absolute;
     left: 0;
@@ -144,7 +147,7 @@
     height: 39px;
     border: solid 2px #e5e5e5;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 }
 
@@ -206,10 +209,13 @@
   justify-content: center;
   text-transform: uppercase;
   line-height: 2.14;
+
+  span {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
-
   .form__area {
     margin: 0 auto;
     display: flex;
@@ -222,7 +228,6 @@
     border: 2px solid @color-grey;
     background-color: #ffffff;
   }
-
 
   .personal-info {
     order: 1;
@@ -423,5 +428,147 @@
   .form__tip {
     margin: 0;
     margin-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__area {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 82%;
+    margin: 0 auto;
+  }
+
+  .form__title,
+  .form__title--request {
+    max-width: 762px;
+  }
+
+  .form__title--request {
+    display: inline-block;
+    margin-bottom: 82px;
+  }
+
+  .personal-info {
+    max-width: 40%;
+    margin: 0;
+  }
+
+  .personal-info__list {
+    margin: 0;
+    margin-left: 18px;
+    width: 439px;
+  }
+
+  .personal-info__label,
+  .contacts-info__label {
+    margin-left: 3px;
+  }
+
+  .personal-info__item {
+    margin-bottom: 53px;
+  }
+
+  .form__group__title {
+    max-width: 394px;
+  }
+
+  .apps-info {
+    margin-top: -12px;
+    margin-left: 70px;
+    padding-right: 37px;
+  }
+
+  .apps-info__item {
+    margin-left: 53px;
+    margin-top: 10px;
+  }
+
+  .contacts-info__list {
+    display: flex;
+  }
+
+  .contacts-info__input {
+    width: 371px;
+    padding-top: 0;
+    padding-bottom: 4px;
+    margin-bottom: 7px;
+  }
+
+  .contacts-info__item {
+    margin-bottom: 4px;
+
+    &:not(:last-child) {
+      margin-right: 75px;
+    }
+  }
+
+  .contacts-info__label {
+    margin-left: 19px;
+    margin-bottom: 10px;
+  }
+
+  .adventures-info {
+    width: 100%;
+  }
+
+  .adventures-info__title {
+    max-width: 450px;
+  }
+
+  .adventures-info__list {
+    padding: 0;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 200px;
+
+  }
+
+  .adventures-info__item {
+    width: 290px;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .emotions-info {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 44px;
+    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 65px;
+  }
+
+  .emotions-info__title {
+    margin-bottom: 34px;
+  }
+
+  .emotions-info__textarea {
+    width: 819px;
+    min-height: 127px;
+  }
+
+  .form__submit__wrapper {
+    width: 100%;
+  }
+
+  .form__submit {
+    margin-top: 2px;
+    margin-left: 22px;
+  }
+
+  .form__tip {
+    margin-top: 5px;
+    margin-right: 22px;
+
+    span {
+      display: inline-block;
+    }
   }
 }
