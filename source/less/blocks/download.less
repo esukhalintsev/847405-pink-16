@@ -6,16 +6,16 @@
   text-align: center;
   background:
     url("../img/iphone-hand-mobile@1x.png") 9px 109px,
-    url("../img/bg-back-mobile@1x.jpg") 0% -28%;
+    url("../img/bg-back-mobile@1x.jpg") 0% 0%;
   background-repeat: no-repeat;
   background-size: 258px 286px,
-    100% 486px; //костыль, нужно доработать
+    100% auto;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background:
-      url("../img/iphone-hand-mobile@2x.png"),
+      url("../img/iphone-hand-mobile@2x.png") 9px 109px,
       url("../img/bg-back-mobile@2x.jpg");
-    background-size: 258px 286px, 320px auto;
+    background-size: 258px 286px, 100% auto;
     background-repeat: no-repeat;
   }
 }
