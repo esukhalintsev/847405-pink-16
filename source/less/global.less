@@ -26,7 +26,8 @@
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   margin: -1px;
   padding: 0;
@@ -40,14 +41,24 @@ input[type="checkbox"].visually-hidden {
 }
 
 * {
+  //убрать
   margin: 0;
   padding: 0;
 }
 
-body {
-  margin: 0 auto;
-  min-width: 320px;
+html {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 320px; //для мобильной версии
 }
 
 a {
@@ -55,17 +66,17 @@ a {
 }
 
 ul {
-  list-style: none;
+  list-style: none; //убрать
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 @media (min-width: @tablet-width) {
   body {
-    width: 800px;
+    width: 660px;
   }
 }
 
