@@ -3,22 +3,33 @@
 }
 
 .page-footer__wrappper {
+  margin-top: 42px;
   display: flex;
   flex-direction: column;
 }
 
-.page-footer__logo {
+.page-footer__link {
   margin: 0 auto;
-  margin-bottom: 51px;
+  margin-bottom: 35px;
+}
 
-  &:hover path,
-  &:focus path {
+.page-footer__logo,
+.developer__logo,
+.social__logo {
+
+  &:hover,
+  &:focus {
     fill: @color-red;
   }
 
-  &:active path {
-    fill: rgba(@color-red, 0.3);
+  &:active {
+    opacity: 0.1;
   }
+}
+
+.page-footer__logo {
+  fill: #000000;
+
 }
 
 .social__item {
@@ -29,72 +40,59 @@
 
 .social__links {
   margin: 0 auto;
-  margin-bottom: 47px;
+  margin-bottom: 33px;
   display: flex;
   align-items: center;
 }
 
 .social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   border: 3px solid rgba(@color-darkblue, 0.1);
-  border-radius: 100%;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
 
-  path {
-    fill: @color-red;
-  }
-
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: #000000;
   }
 
   &:active {
-    border-color: rgba(#000000, 0.1);
-
-    path {
-      fill: rgba(@color-red, 0.1);
-    }
+    opacity: 0.1;
   }
 }
 
-
-.social__link--twitter {
-  padding: 13px 13px 12px 14px;
-}
-
-.social__link--facebook {
-  padding: 15px 18px 10px 17px;
-}
-
-.social__link--youtube {
-  padding: 13px 13px 12px 15px;
+.social__logo {
+  fill: @color-red;
 }
 
 .developer {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  color: @color-darkblue;
 }
 
 .developer__text {
+  color: @color-darkblue;
   font-family: "Open Sans", "Arial", sans-serif;
-  margin-right: 9px;
-  font-size: 18px;
+  margin-right: 14px;
+  font-size: 14px;
   line-height: 18px;
 }
 
 .developer__link {
-  path {
-    fill: @color-red;
-  }
+  margin-top: 7px;
+}
 
-  &:hover path,
-  &:focus path {
+.developer__logo {
+  fill: @color-red;
+
+  &:hover,
+  &:focus {
     fill: #000000;
-  }
-
-  &:active path {
-    fill: rgba(@color-darkblue, 0.3);
   }
 }
 
@@ -103,7 +101,7 @@
     display: block;
   }
 
-  .page-footer__logo {
+  .page-footer__link {
     margin: 0;
     margin-left: 20px;
     margin-right: 75px;
@@ -134,7 +132,7 @@
   .developer__text {
     margin-right: 15px;
     margin-top: 8px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 18px;
   }
 
@@ -150,7 +148,7 @@
     max-width: 979px;
   }
 
-  .page-footer__logo {
+  .page-footer__link {
     margin-right: 232px;
   }
 

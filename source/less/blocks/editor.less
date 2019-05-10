@@ -1,0 +1,142 @@
+.editor__wrapper {
+  margin: 0 auto;
+
+}
+
+.editor__title {
+  text-align: center;
+  margin-right: 5px;
+  line-height: 30px;
+  margin-bottom: 42px;
+}
+
+.editor__title__span {
+  display: block;
+}
+
+.editor__area {
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 40px;
+  background-color: @color-grey;
+  padding-top: 20px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background-color: #000;
+    opacity: .1;
+    bottom: 199px;
+  }
+}
+
+.editor__tools {
+  margin-top: 31px;
+}
+
+.editor__list {
+  margin: 0 auto;
+  margin-left: 34px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.editor__item {
+  margin-right: 28px;
+
+  &:last-child {
+    margin-left: 10px;
+  }
+}
+
+.editor__icon {
+  fill: @color-darkblue;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &--active {
+    fill: @color-red;
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.editor__range-controls {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.editor__range__scale {
+  width: 240px;
+  margin: 0 auto;
+  height: 2px;
+  background-color: @color-darkblue;
+}
+
+.editor__range__toggle {
+  cursor: pointer;
+  position: absolute;
+  right: 55px;
+  top: -6px;
+  width: 14px;
+  height: 14px;
+  background-color: @color-grey;
+  border: 2px solid @color-red;
+  border-radius: 50%;
+  &:active {
+    background-color: @color-red;
+  }
+}
+
+.editor__button {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  width: 278px;
+  height: 56px;
+  border: 3px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: "Open Sans", "arial", sans-serif;
+
+  &--submit {
+    border: solid @color-red;
+    color: @color-red;
+    margin-bottom: 10px;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      background-color: @color-red;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--cancel {
+    border: solid #000000;
+    opacity: 0.1;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+    &:active {
+      color:rgba(#ffffff, 0.3);
+      background-color: rgba(@color-darkblue);
+    }
+  }
+}
