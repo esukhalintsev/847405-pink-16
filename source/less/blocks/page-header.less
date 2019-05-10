@@ -11,21 +11,27 @@
 
 .page-header__logo {
   position: absolute;
-  top: 17px;
-  left: 29px;
+  top: 22px;
+  left: 21px;
   z-index: 1;
   align-self: flex-start;
+  fill: #ffffff;
 
   &--tablet,
   &--desktop {
     display: none;
   }
 
-  &:hover path,
-  &:focus path {
+  &:hover,
+  &:focus {
     fill: @color-red;
   }
+
+  &:active {
+    fill: rgba(#ffffff, 0.3);
+  }
 }
+
 
 .main-nav {
   display: flex;
@@ -40,8 +46,8 @@
 }
 
 .main-nav__toggle {
-  margin-top: 17px;
-  margin-right: 14px;
+  margin-top: 21px;
+  margin-right: 6px;
   width: 50px;
   height: 24px;
   background-color: @color-darkblue;
@@ -74,6 +80,7 @@
 }
 
 .main-nav__list a[href] {
+
   &:hover,
   &:focus {
     color: @color-red;
@@ -92,7 +99,7 @@
   text-transform: uppercase;
 }
 
-.site-list__item {
+.main-nav__item {
   padding-top: 16px;
   padding-bottom: 14px;
   border-bottom: 1px solid #000000;
@@ -154,6 +161,8 @@
   }
 
   .page-header__logo {
+    left: 131px;
+
     &:active path {
       fill: @color-transparent;
     }
@@ -177,8 +186,10 @@
 
   .main-nav__list {
     margin-top: 0;
-    margin-right: 48px;
+    margin-right: 78px;
     flex-direction: row;
+    width: 673px;
+
   }
 
   .main-nav__link {
@@ -187,18 +198,21 @@
   }
 
 
-  .site-list__item {
+  .main-nav__item {
     padding-top: 39px;
     padding-bottom: 39px;
     border: 0;
-    margin-right: 73px;
+
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
 
     &:first-child {
       border: 0;
     }
   }
 
-  .site-list__item--current {
+  .main-nav__item--current {
     user-select: none;
 
     a {

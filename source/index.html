@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
   <header class="page-header">
     <a class="page-header__logo">
       <svg class="page-header__logo--mobile" width="74.426" height="22.859">
@@ -25,17 +24,17 @@
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--current">
             <a class="main-nav__link">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
@@ -70,11 +69,12 @@
     </section>
     <section class="features">
       <h2 class="visually-hidden">Возможности приложения</h2>
-      <p class="features__slogan">Устали от серости мегаполиса? </p>
-      <p class="features__slogan features__slogan--answer">
-        Нам есть, что вам <br> предложить!</p>
+      <div class="features__slogan__wrapper">
+        <p class="features__slogan__text">Устали от серости мегаполиса? </p>
+        <p class="features__slogan__text features__slogan__text--answer">
+          Нам есть, что вам <br> предложить!</p>
+      </div>
       <div class="features__wrapper">
-
         <ul class="features__list">
           <li class="features__item features__item--mood">
             <h3 class="features__title">Поднимает настроение</h3>
@@ -91,7 +91,7 @@
             <span class="timer__value">24</span>
           </div>
           <div class="timer__description">
-            <h3 class="timer__title">Эффект на 24 часа!</h3>
+            <h3 class="timer__title">Эффект на&nbsp;24 часа!</h3>
             <p class="timer__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
             <a class="timer__link" href="#">Узнать больше об исследовании</a>
           </div>
@@ -106,10 +106,18 @@
           <p class="comments__job">25 лет, водитель трамвая</p>
           <p class="comments__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
         </blockquote>
-        <div class="comments__toggles slider__toggles">
-          <button class="slider__toggle" type="button"></button>
-          <button class="slider__toggle" type="button"></button>
-          <button class="slider__toggle" type="button"></button>
+        <div class="comments__toggles">
+          <button class="slider__toggle slider__toggle--active slider__toggle--left" type="button">
+            <svg width="22" height="41">
+              <use xlink:href="./img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <button class="slider__toggle slider__toggle--right" type="button">
+            <svg width="22" height="41">
+              <use xlink:href="./img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <button class="slider__toggle slider__toggle--unseen" type="button"></button>
         </div>
       </div>
     </section>
@@ -117,79 +125,81 @@
       <div class="price__wrapper">
         <h2 class="visually-hidden">Тарифные планы</h2>
         <table class="price__table">
-          <tr>
-            <td class="transparent"> </td>
-            <td class="price__category">
-              <b class="price__title">База</b>
-              <p class="price__value">1,99 USD</p>
-            </td>
-            <td class="price__category">
-              <b class="price__title">Стандарт</b>
-              <p class="price__value">3,99 USD</p>
-            </td>
-            <td class="price__category">
-              <b class="price__title">Анлим</b>
-              <p class="price__value">9,99 USD</p>
-            </td>
-          </tr>
-          <tr>
-            <td class="price__attr">Розовый фильтр</td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-          </tr>
-          <tr>
-            <td class="price__attr">Смайлики</td>
-            <td>
-              <svg width="26.752" height="26.752">
-                <use xlink:href="./img/sprite.svg#icon-no"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-          </tr>
-          <tr>
-            <td class="price__attr">Комментарии</td>
-            <td>
-              <svg width="26.752" height="26.752">
-                <use xlink:href="./img/sprite.svg#icon-no"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="26.752" height="26.752">
-                <use xlink:href="./img/sprite.svg#icon-no"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td class="price__table__trasparent-cell price__table__left-cell"> </td>
+              <td class="price__category">
+                <p class="price__title">База</p>
+                <p class="price__value">1,99 USD</p>
+              </td>
+
+              <td class="price__category price__category--popular">
+                <p class="price__title">Стандарт</p>
+                <p class="price__value">3,99 USD</p>
+              </td>
+
+              <td class="price__category">
+                <p class="price__title">Анлим</p>
+                <p class="price__value">9,99 USD</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="price__table__trasparent-cell price__cell">
+                <span class="price__table__category">Розовый фильтр</span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Розовый фильтр</span><span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Розовый фильтр</span><span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Розовый фильтр</span><span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="price__table__trasparent-cell price__cell">
+                <span class="price__table__category">Смайлики</span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Смайлики</span>
+                <span class="price__table__symbol price__table__symbol--no"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Смайлики</span>
+                <span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Смайлики</span>
+                <span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="price__table__trasparent-cell price__cell">
+                <span class="price__table__category">Комментарии</span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Комментарии</span>
+                <span class="price__table__symbol price__table__symbol--no"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Комментарии</span>
+                <span class="price__table__symbol price__table__symbol--no"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Комментарии</span>
+                <span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+            </tr>
+
+          </tbody>
         </table>
         <div class="price__toggles slider__toggles">
           <button class="slider__toggle" type="button"></button>
-          <button class="slider__toggle" type="button"></button>
+          <button class="slider__toggle slider__toggle--active" type="button"></button>
           <button class="slider__toggle" type="button"></button>
         </div>
       </div>
@@ -203,17 +213,20 @@
             <b class="contacts__title">Звоните:</b>
             <p class="contacts__text">+7 (812) 555-66-66</p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--write">
             <b class="contacts__title">Пишите:</b>
             <p class="contacts__text contacts__text--email ">mail@htmlacademy.ru</p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--street">
             <b class="contacts__title">Приезжайте в гости:</b>
-            <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+            <p class="contacts__text">ул. Большая Конюшенная,&nbsp;19/8</p>
           </li>
         </ul>
       </div>
-      <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.370645671199!2d30.32056904086148!3d59.93629870266311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631056267101b%3A0xa9be6d127c1fcba1!2z0KbQtdC90YLRgCDQuNGB0LrRg9GB0YHRgtCy0LAg0Lgg0LzRg9C30YvQutC4INCm0JPQn9CRINC40LwuINCSLtCSLiDQnNCw0Y_QutC-0LLRgdC60L7Qs9C-!5e0!3m2!1sru!2sru!4v1554295234414!5m2!1sru!2sru" width="100%" height="250" allowfullscreen></iframe>
+      <div class="contacts__map__wrapper">
+        <iframe class="contacts__map__scheme" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.370645671199!2d30.32056904086148!3d59.93629870266311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631056267101b%3A0xa9be6d127c1fcba1!2z0KbQtdC90YLRgCDQuNGB0LrRg9GB0YHRgtCy0LAg0Lgg0LzRg9C30YvQutC4INCm0JPQn9CRINC40LwuINCSLtCSLiDQnNCw0Y_QutC-0LLRgdC60L7Qs9C-!5e0!3m2!1sru!2sru!4v1554295234414!5m2!1sru!2sru" width="100%" height="250" allowfullscreen></iframe>
+
+      </div>
     </section>
   </main>
   <footer class="page-footer page-footer--index">

@@ -86,13 +86,15 @@
 .adventures-info__title {
   margin-bottom: 38px;
 }
-
 .adventures-info__label {
+  cursor: pointer;
+}
+
+.adventures-info__input + .adventures-info__label {
   position: relative;
   font-size: 18px;
   line-height: 30px;
   display: block;
-  padding: 5px 10px 5px 89px;
 
   &::before {
     content: "";
@@ -130,6 +132,7 @@
 }
 
 .apps-info__label {
+  cursor: pointer;
   position: relative;
   font-size: 18px;
   line-height: 30px;
@@ -194,6 +197,7 @@
   height: 60px;
   font-size: 18px;
   color: #ffffff;
+  cursor: pointer;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: bold;
