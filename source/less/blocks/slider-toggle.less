@@ -1,0 +1,51 @@
+.slider__toggle {
+  width: 7px;
+  height: 7px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(90, 129, 32, 0.3);
+  outline: none;
+
+  &--active {
+    width: 12px;
+    height: 12px;
+    border: solid 3px @color-darkblue;
+    background-color: #ffffff;
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__toggle {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 22px;
+    height: 41px;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      display: block;
+    }
+
+    &--left {
+      position: absolute;
+      top: -192px;
+      left: -443px;
+    }
+
+    &--right {
+      position: absolute;
+      top: -192px;
+      right: -439px;
+    }
+
+    &--unseen {
+      display: none;
+    }
+  }
+}
