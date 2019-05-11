@@ -50,7 +50,7 @@
   margin-right: 6px;
   width: 50px;
   height: 24px;
-  background-color: @color-darkblue;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   border: 0;
@@ -58,18 +58,29 @@
   cursor: pointer;
 }
 
+.icon-menu {
+  fill: #ffffff;
+  &:hover,
+  &:focus {
+    fill:@color-red;
+  }
+  &:active {
+    fill:rgba(@color-red, 0.3);
+  }
+}
+
 .main-nav--opened {
   background-color: @color-darkblue;
   position: relative;
 
-  .main-nav__toggle {
-    background-image: url("../img/icon-menu-cross.svg");
+  .icon-menu--burger {
+    display: none;
   }
 }
 
 .main-nav--closed {
-  .main-nav__toggle {
-    background-image: url("../img/icon-menu-burger.svg");
+  .icon-menu--cross {
+    display: none;
   }
 }
 

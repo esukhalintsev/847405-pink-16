@@ -60,12 +60,20 @@
   padding-left: 18px;
   font-size: 18px;
   border: 2px solid @color-gray;
+  outline: none;
 
   &::placeholder {
     font-family: "Open Sans",
       "Arial",
       sans-serif;
     color: inherit;
+  }
+  &:hover,
+  &:focus {
+    border: 2px solid @color-darkblue;
+  }
+  &:active {
+    border-color:@color-red;
   }
 }
 
@@ -116,14 +124,21 @@
     height: 39px;
     background-color: #ffffff;
     border: solid 2px #e5e5e5;
+    outline: none;
   }
 
   &:hover,
   &:focus {
     &::before {
-      border: 2px solid @color-ltblue;
+      border: 2px solid @color-darkblue;
     }
   }
+  &:active {
+    &::before {
+      border-color: @color-red;
+    }
+  }
+
 }
 
 .adventures-info__input:checked + .adventures-info__label::before {
@@ -184,8 +199,13 @@
   &:hover,
   &:focus {
     &::before {
-      border: 2px solid @color-ltblue;
+      border: 2px solid @color-darkblue;
       border-radius: 50%;
+    }
+  }
+  &:active {
+    &::before {
+    border-color: @color-red;
     }
   }
 }
@@ -213,11 +233,19 @@
   font-size: 18px;
   border: 2px solid @color-gray;
   resize: none;
+  outline: none;
 
   &::placeholder {
     font-family: "Open Sans", "Arial", sans-serif;
     color: inherit;
     line-height: 30px;
+  }
+  &:hover,
+  &:focus {
+    border: 2px solid @color-darkblue;
+  }
+  &:active {
+    border-color: @color-red;
   }
 }
 
@@ -240,6 +268,19 @@
   text-transform: uppercase;
   border: 0;
   background-color: @color-green;
+
+  &:hover,
+  &:focus {
+    background-color: @color-darkgreen;
+  }
+
+  &:active {
+    color: @color-transparent;
+  }
+
+  &:disabled {
+    background-color: @color-gray;
+  }
 }
 
 .form__tip {
@@ -498,6 +539,7 @@
     margin-left: 18px;
     width: 439px;
   }
+
   .personal-info__input {
     padding-left: 20px;
   }
@@ -525,6 +567,7 @@
     margin-left: 53px;
     margin-top: 10px;
   }
+
   .contacts-info {
     margin-bottom: 59px;
   }

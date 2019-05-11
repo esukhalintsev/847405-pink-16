@@ -22,7 +22,14 @@
       </svg>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
+        <svg class="icon-menu icon-menu--burger" width="50" height="24">
+          <use xlink:href="./img/sprite.svg#icon-menu-burger"></use>
+        </svg>
+         <svg class="icon-menu icon-menu--cross" width="50" height="24">
+          <use xlink:href="./img/sprite.svg#icon-menu-cross"></use>
+        </svg>
+      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
@@ -108,12 +115,12 @@
         </blockquote>
         <div class="comments__toggles">
           <button class="slider__toggle slider__toggle--active slider__toggle--left" type="button">
-            <svg width="22" height="41">
+            <svg class="slider__icon" width="22" height="41">
               <use xlink:href="./img/sprite.svg#arrow-left"></use>
             </svg>
           </button>
           <button class="slider__toggle slider__toggle--right" type="button">
-            <svg width="22" height="41">
+            <svg class="slider__icon" width="22" height="41">
               <use xlink:href="./img/sprite.svg#arrow-right"></use>
             </svg>
           </button>
@@ -229,7 +236,7 @@
       </div>
     </section>
   </main>
- <footer class="page-footer page-footer--index">
+  <footer class="page-footer page-footer--index">
     <div class="page-footer__wrappper">
       <a class="page-footer__link" href="index.html">
         <svg class="page-footer__logo" width="146.3" height="40.375">

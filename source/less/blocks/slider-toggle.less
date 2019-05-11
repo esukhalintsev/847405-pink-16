@@ -3,10 +3,20 @@
   height: 7px;
   border: none;
   border-radius: 50%;
-  background-color: rgba(90, 129, 32, 0.3);
+  background-color: @color-darkblue;
+  opacity: 0.3;
   outline: none;
+  cursor: pointer;
+  &:hover,
+  &:focus{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.1;
+  }
 
   &--active {
+    opacity: 1;
     width: 12px;
     height: 12px;
     border: solid 3px @color-darkblue;
@@ -28,8 +38,18 @@
     border: none;
     cursor: pointer;
 
-    svg {
+    .slider__icon {
       display: block;
+      fill: @color-darkblue;
+      opacity: 0.3;
+
+      &:hover,
+      :focus{
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 0.1;
+      }
     }
 
     &--left {
