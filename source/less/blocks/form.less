@@ -5,14 +5,16 @@
 .form__title,
 .form__title--request {
   margin: 0 auto;
-  margin-bottom: 34px;
+  margin-bottom: 27px;
   max-width: 276px;
   text-align: center;
+  line-height: 30px;
 }
 
 .form__group__title {
+  position: relative;
+  top: 56px;
   max-width: 247px;
-  margin: 0 auto;
   color: @color-red;
   text-align: center;
   line-height: 18px;
@@ -27,7 +29,7 @@
 .contacts-info,
 .emotions-info {
   margin: 0 auto;
-  margin-bottom: 62px;
+  margin-bottom: 0px;
   border: none;
   max-width: 86%; //
 }
@@ -36,13 +38,13 @@
 .contacts-info__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 17px;
+  margin-bottom: 11px;
 }
 
 .personal-info__label,
 .contacts-info__label {
   margin-left: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   color: @color-red;
   text-transform: uppercase;
 }
@@ -72,8 +74,20 @@
   background-color: @color-grey;
 }
 
+.personal-info {
+  margin-bottom: 14px;
+}
+
+.adventures-info {
+  margin-bottom: 34px;
+}
+
+.adventures-info__list {
+  margin-top: 57px;
+}
+
 .adventures-info__item {
-  margin-bottom: 42px;
+  margin-bottom: 48px;
 }
 
 .adventures-info__title {
@@ -89,6 +103,8 @@
   font-size: 18px;
   line-height: 30px;
   display: block;
+  padding-top: 4px;
+  padding-left: 89px;
 
   &::before {
     content: "";
@@ -101,6 +117,13 @@
     background-color: #ffffff;
     border: solid 2px #e5e5e5;
   }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 2px solid @color-ltblue;
+    }
+  }
 }
 
 .adventures-info__input:checked + .adventures-info__label::before {
@@ -110,31 +133,42 @@
 }
 
 .contacts-info {
-  margin-top: 32px;
+  margin-bottom: 4px;
+}
+
+.contacts-info__item {
+  margin-bottom: 21px;
 }
 
 .contacts-info__title {
   display: none;
 }
 
+.apps-info {
+  margin-bottom: 37px;
+}
+
 .apps-info__title {
-  margin-bottom: 35px;
+  margin-bottom: 90px;
+}
+
+.apps-info__list {
+  padding-bottom: 7px;
 }
 
 .apps-info__item {
   margin-bottom: 35px;
 }
 
-.apps-info__label {
+.apps-info__input + .apps-info__label {
   cursor: pointer;
   position: relative;
   font-size: 18px;
   line-height: 30px;
   display: block;
-  padding: 5px 10px 5px 89px;
+  padding: 5px 10px 5px 90px;
 
   &::before {
-    //border: none;
     content: "";
     position: absolute;
     left: 0;
@@ -146,6 +180,14 @@
     border-radius: 50%;
     background-color: #ffffff;
   }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 2px solid @color-ltblue;
+      border-radius: 50%;
+    }
+  }
 }
 
 .apps-info__input:checked + .apps-info__label::before {
@@ -154,12 +196,12 @@
 }
 
 .emotions-info {
-  margin-top: 45px;
-  margin-bottom: 39px;
+  margin-bottom: 43px;
   width: 86%;
 }
 
 .emotions-info__title {
+  top: 1px;
   margin-bottom: 17px;
 }
 
@@ -230,7 +272,7 @@
   .personal-info {
     order: 1;
     border: none;
-    margin-bottom: 5px;
+    margin-bottom: 9px;
   }
 
   .apps-info {
@@ -259,6 +301,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 88px;
   }
 
   .form__title,
@@ -269,7 +312,7 @@
 
     &--request {
       display: block;
-      margin-bottom: 75px;
+      margin-bottom: 70px;
     }
   }
 
@@ -277,7 +320,6 @@
   .contacts-info,
   .emotions-info {
     width: 100%;
-    margin: 0;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -307,9 +349,19 @@
   }
 
   .form__group__title {
+    top: 0;
+    margin-bottom: 35px;
     max-width: 464px;
     padding-left: 38px;
     padding-right: 38px;
+  }
+
+  .apps-info {
+    margin-bottom: 57px;
+  }
+
+  .apps-info__list {
+    padding-bottom: 18px;
   }
 
   .apps-info__item {
@@ -317,8 +369,12 @@
     margin-top: 8px;
   }
 
-  .apps-info__label {
+  .apps-info__input + .apps-info__label {
     padding-left: 80px;
+  }
+
+  .contacts-info {
+    margin-bottom: 57px;
   }
 
   .contacts-info__list {
@@ -339,11 +395,11 @@
 
     &::after {
       content: "";
-      top: 0;
-      right: -1px;
+      top: 2px;
+      right: 2px;
       position: absolute;
-      width: 62px;
-      height: 63px;
+      width: 59px;
+      height: 60px;
       background-color: @color-gray;
       background-repeat: no-repeat;
       background-position: center;
@@ -364,8 +420,8 @@
 
   .contacts-info__input {
     width: 496px;
-    margin: 0 auto;
-    margin-bottom: 11px;
+    margin-bottom: 14px;
+    padding-left: 16px;
   }
 
   .contacts-info__label {
@@ -373,15 +429,16 @@
   }
 
   .adventures-info__title {
-    margin-bottom: 44px;
+    margin-bottom: 0;
   }
 
   .adventures-info__list {
+    margin-top: 44px;
     padding-bottom: 5px;
     padding-left: 37px;
   }
 
-  .adventures-info__label {
+  .adventures-info__input + .adventures-info__label {
     padding-left: 78px;
   }
 
@@ -421,12 +478,14 @@
 
   .form__title,
   .form__title--request {
+    margin-top: 92px;
     max-width: 762px;
   }
 
   .form__title--request {
     display: inline-block;
-    margin-bottom: 82px;
+    margin-top: 0;
+    margin-bottom: 83px;
   }
 
   .personal-info {
@@ -438,6 +497,9 @@
     margin: 0;
     margin-left: 18px;
     width: 439px;
+  }
+  .personal-info__input {
+    padding-left: 20px;
   }
 
   .personal-info__label,
@@ -463,6 +525,9 @@
     margin-left: 53px;
     margin-top: 10px;
   }
+  .contacts-info {
+    margin-bottom: 59px;
+  }
 
   .contacts-info__list {
     display: flex;
@@ -472,7 +537,8 @@
     width: 371px;
     padding-top: 0;
     padding-bottom: 4px;
-    margin-bottom: 7px;
+    padding-left: 18px;
+    margin-bottom: 11px;
   }
 
   .contacts-info__item {
@@ -522,7 +588,7 @@
     padding-bottom: 44px;
     margin: 0;
     margin: 0 auto;
-    margin-bottom: 65px;
+    margin-bottom: 63px;
   }
 
   .emotions-info__title {
@@ -536,6 +602,7 @@
 
   .form__submit__wrapper {
     width: 100%;
+    margin-bottom: 71px;
   }
 
   .form__submit {
