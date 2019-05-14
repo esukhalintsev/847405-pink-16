@@ -3,9 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="fonts/opensans.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/svg4everybody.min.js"></script>
+   <script>svg4everybody();</script>
+  <script src="js/picturefill.js">
+  </script>
 </head>
 
 <body>
@@ -26,7 +38,7 @@
         <svg class="icon-menu icon-menu--burger" width="50" height="24">
           <use xlink:href="./img/sprite.svg#icon-menu-burger"></use>
         </svg>
-         <svg class="icon-menu icon-menu--cross" width="50" height="24">
+        <svg class="icon-menu icon-menu--cross" width="50" height="24">
           <use xlink:href="./img/sprite.svg#icon-menu-cross"></use>
         </svg>
       </button>
@@ -50,12 +62,12 @@
   </header>
   <main class="page-photos">
     <div class="page-intro">
-      <h1 class="page-intro__title">Фотографии пользователей</h1>
+      <h1 class="page-intro__title">Фотографии <br>пользователей</h1>
     </div>
     <section class="photos">
       <h2 class="photos__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
       <div class="photos__item photos-day">
-        <a class="photos__picture" href="#">
+        <a class="photos__picture photos__picture--day" href="#">
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="./img/panorama-desktop@1x.webp 1x, ./img/panorama-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="./img/panorama-tablet@1x.webp 1x, ./img/panorama-tablet@2x.webp 2x">
@@ -77,11 +89,15 @@
       </div>
       <ul class="photos__list">
         <li class="photos__item">
-          <a class="photos__picture" href="">
+          <a class="photos__picture" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 960px)" srcset="./img/photo-car-desktop@1x.webp 1x, ./img/photo-drumset-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="./img/photo-car-tablet@1x.webp 1x, ./img/photo-drumset-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/photo-car-mobile@1x.webp 1x, ./img/photo-car-mobile@2x.webp 2x">
+
               <source media="(min-width: 960px)" srcset="./img/photo-car-desktop@1x.jpg 1x, ./img/photo-car-desktop@2x.jpg.jpg 2x">
               <source media="(min-width: 660px)" srcset="./img/photo-car-tablet@1x.jpg 1x, ./img/photo-car-tablet@2x.jpg.jpg 2x">
-              <img src="./img/photo-car-mobile@1x.jpg" alt="Фотография автомобиля" srcet="./img/photo-car-mobile@2x.jpg">
+              <img src="./img/photo-car-mobile@1x.jpg" alt="Фотография автомобиля" srcset="./img/photo-car-mobile@2x.jpg">
             </picture>
           </a>
           <div class="photos__info">
@@ -101,7 +117,7 @@
 
               <source media="(min-width: 960px)" srcset="./img/photo-drumset-desktop@1x.jpg 1x, ./img/photo-drumset-desktop@2x.jpg.jpg 2x">
               <source media="(min-width: 660px)" srcset="./img/photo-drumset-tablet@1x.jpg 1x, ./img/photo-drumset-tablet@2x.jpg.jpg 2x">
-              <img src="./img/photo-drumset-mobile@1x.jpg" alt="Барабанная установка" srcet="./img/photo-drumset-mobile@2x.jpg">
+              <img src="./img/photo-drumset-mobile@1x.jpg" alt="Барабанная установка" srcset="./img/photo-drumset-mobile@2x.jpg">
             </picture>
           </a>
           <div class="photos__info">
@@ -121,7 +137,7 @@
 
               <source media="(min-width: 960px)" srcset="./img/photo-window-desktop@1x.jpg 1x, ./img/photo-window-desktop@2x.jpg.jpg 2x">
               <source media="(min-width: 660px)" srcset="./img/photo-window-tablet@1x.jpg 1x, ./img/photo-window-tablet@2x.jpg.jpg 2x">
-              <img src="./img/photo-window-mobile@1x.jpg" alt="Стеклянный потолок" srcet="./img/photo-window-mobile@2x.jpg">
+              <img src="./img/photo-window-mobile@1x.jpg" alt="Стеклянный потолок" srcset="./img/photo-window-mobile@2x.jpg">
             </picture>
           </a>
           <div class="photos__info">
@@ -141,7 +157,7 @@
 
               <source media="(min-width: 960px)" srcset="./img/photo-fair-desktop@1x.jpg 1x, ./img/photo-fair-desktop@2x.jpg.jpg 2x">
               <source media="(min-width: 660px)" srcset="./img/photo-fair-tablet@1x.jpg 1x, ./img/photo-fair-tablet@2x.jpg.jpg 2x">
-              <img src="./img/photo-fair-mobile@1x.jpg" alt="Кубанская бахча" srcet="./img/photo-fair-mobile@2x.jpg">
+              <img src="./img/photo-fair-mobile@1x.jpg" alt="Кубанская бахча" srcset="./img/photo-fair-mobile@2x.jpg">
             </picture>
           </a>
           <div class="photos__info">
@@ -161,7 +177,7 @@
 
               <source media="(min-width: 960px)" srcset="./img/photo-pov-desktop@1x.jpg 1x, ./img/photo-pov-desktop@2x.jpg.jpg 2x">
               <source media="(min-width: 660px)" srcset="./img/photo-pov-tablet@1x.jpg 1x, ./img/photo-pov-tablet@2x.jpg.jpg 2x">
-              <img src="./img/photo-pov-mobile@1x.jpg" alt="Горы" srcet="./img/photo-pov-mobile@2x.jpg">
+              <img src="./img/photo-pov-mobile@1x.jpg" alt="Горы" srcset="./img/photo-pov-mobile@2x.jpg">
             </picture>
           </a>
           <div class="photos__info">
@@ -181,7 +197,7 @@
 
               <source media="(min-width: 960px)" srcset="./img/photo-wing-desktop@1x.jpg 1x, ./img/photo-wing-desktop@2x.jpg.jpg 2x">
               <source media="(min-width: 660px)" srcset="./img/photo-wing-tablet@1x.jpg 1x, ./img/photo-wing-tablet@2x.jpg.jpg 2x">
-              <img src="./img/photo-wing-mobile@1x.jpg" alt="Крыло самолёта" srcet="./img/photo-wing-mobile@2x.jpg">
+              <img src="./img/photo-wing-mobile@1x.jpg" alt="Крыло самолёта" srcset="./img/photo-wing-mobile@2x.jpg">
             </picture>
           </a>
           <div class="photos__info">
@@ -199,21 +215,25 @@
         <h2 class="visually-hidden">Редактор фотографий</h2>
         <p class="editor__title"><span class="editor__title__span">Затмите их всех!</span>Выкладывайте все, что накопилось в телефоне!</p>
         <div class="editor__area">
-          <picture>
-            <source type="image/webp" media="(min-width: 960px)" srcset="./img/photo-road-desktop@1x.webp 1x, ./img/photo-road-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="./img/photo-road-tablet@1x.webp 1x, ./img/photo-road-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="./img/photo-road-mobile@1x.webp 1x, ./img/photo-road-mobile@2x.webp 2x">
+          <div class="editor__image">
+            <picture>
+              <source type="image/webp" media="(min-width: 960px)" srcset="./img/photo-road-desktop@1x.webp 1x, ./img/photo-road-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="./img/photo-road-tablet@1x.webp 1x, ./img/photo-road-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/photo-road-mobile@1x.webp 1x, ./img/photo-road-mobile@2x.webp 2x">
 
-            <source media="(min-width: 960px)" srcset="./img/photo-road-desktop@1x.jpg 1x, ./img/photo-road-desktop@2x.jpg.jpg 2x">
-            <source media="(min-width: 660px)" srcset="./img/photo-road-tablet@1x.jpg 1x, ./img/photo-road-tablet@2x.jpg.jpg 2x">
-            <img src="./img/photo-road-mobile@1x.jpg" alt="Загружамое изображение" srcet="./img/photo-road-mobile@2x.jpg">
-          </picture>
+              <source media="(min-width: 960px)" srcset="./img/photo-road-desktop@1x.jpg 1x, ./img/photo-road-desktop@2x.jpg.jpg 2x">
+              <source media="(min-width: 660px)" srcset="./img/photo-road-tablet@1x.jpg 1x, ./img/photo-road-tablet@2x.jpg.jpg 2x">
+              <img src="./img/photo-road-mobile@1x.jpg" alt="Загружамое изображение" srcset="./img/photo-road-mobile@2x.jpg">
+            </picture>
+          </div>
           <div class="editor__tools">
             <ul class="editor__list">
               <li class="editor__item">
-                <svg class="editor__icon editor__icon--active editor__icon--crop" width="49" height="49">
-                  <use xlink:href="./img/sprite.svg#icon-editor-crop"></use>
-                </svg>
+                <button class="editor__item__button">
+                  <svg class="editor__icon editor__icon--active editor__icon--crop" width="49" height="49">
+                    <use xlink:href="./img/sprite.svg#icon-editor-crop"></use>
+                  </svg>
+                </button>
                 <div class="editor__range-controls editor__range-controls--mobile">
                   <div class="editor__range__scale">
                   </div>
@@ -221,9 +241,11 @@
                 </div>
               </li>
               <li class="editor__item">
-                <svg class="editor__icon editor__icon--fill" width="53" height="47">
-                  <use xlink:href="./img/sprite.svg#icon-editor-fill"></use>
-                </svg>
+                <button class="editor__item__button">
+                  <svg class="editor__icon editor__icon--fill" width="53" height="47">
+                    <use xlink:href="./img/sprite.svg#icon-editor-fill"></use>
+                  </svg>
+                </button>
                 <div class="editor__range-controls editor__range-controls--mobile">
                   <div class="editor__range__scale">
                   </div>
@@ -231,9 +253,11 @@
                 </div>
               </li>
               <li class="editor__item">
-                <svg class="editor__icon editor__icon--contrast" width="32" height="32">
-                  <use xlink:href="./img/sprite.svg#icon-editor-contrast"></use>
-                </svg>
+                <button class="editor__item__button">
+                  <svg class="editor__icon editor__icon--contrast" width="32" height="32">
+                    <use xlink:href="./img/sprite.svg#icon-editor-contrast"></use>
+                  </svg>
+                </button>
                 <div class="editor__range-controls editor__range-controls--mobile">
                   <div class="editor__range__scale">
                   </div>

@@ -1,9 +1,14 @@
+.photos {
+  ul {
+    list-style: none;
+  }
+}
+
 .photos__list {
   margin: 0 auto;
-  //width: 320px;
-  // padding: 0 20px;
   margin-bottom: 23px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
 }
@@ -20,9 +25,12 @@
 }
 
 .photos__info {
+  display: flex;
+  flex-direction: column;
   margin-top: -7px;
   padding-bottom: 20px;
   width: 280px;
+  max-width: 100%;
   background-color: @color-grey;
 }
 
@@ -81,7 +89,7 @@
 }
 
 .photos__text {
-  padding-bottom: 8px;
+  padding-bottom: 9px;
   padding-left: 17px;
 }
 
@@ -96,7 +104,7 @@
     content: "";
     position: absolute;
     left: 18px;
-    top: 2px;
+    top: 6px;
     width: 13px;
     height: 13px;
     background-image: url("../img/icon-heart.svg");
@@ -113,6 +121,9 @@
       padding-bottom: 17px;
       height: auto;
     }
+  }
+  .photos__picture--day {
+    max-width: none
   }
 
   .photos__item {

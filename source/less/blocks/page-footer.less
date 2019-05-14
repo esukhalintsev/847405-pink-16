@@ -1,3 +1,9 @@
+.page-footer {
+  ul {
+    list-style: none;
+  }
+}
+
 .page-footer--index {
   display: none;
 }
@@ -5,6 +11,7 @@
 .page-footer__wrappper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .page-footer__link {
@@ -27,8 +34,10 @@
 }
 
 .page-footer__logo {
-  fill: #000000;
 
+  &--desktop {
+    display: none;
+  }
 }
 
 .social__item {
@@ -48,8 +57,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border: 3px solid rgba(@color-darkblue, 0.1);
   border-radius: 50%;
   position: relative;
@@ -80,10 +89,8 @@
   margin-right: 14px;
   font-size: 14px;
   line-height: 18px;
-}
-
-.developer__link {
-  margin-top: 7px;
+  display: flex;
+  align-items: center;
 }
 
 .developer__logo {
@@ -102,18 +109,19 @@
 
   .page-footer__link {
     margin: 0;
-    margin-left: 20px;
-    margin-right: 78px;
   }
 
   .page-footer__wrappper {
     margin-bottom: 23px;
+    padding: 0 20px;
+    justify-content: space-between;
     flex-direction: row;
+    align-items: center;
   }
 
   .social__links {
     margin: 0;
-    margin-right: 94px;
+    margin-left: -20px;
     flex-direction: row;
   }
 
@@ -123,46 +131,56 @@
 
   .developer {
     margin: 0;
-    margin-top: 2px;
     flex-direction: row;
   }
 
   .developer__text {
-    margin-right: 16px;
     line-height: 18px;
   }
 
   .developer__link {
-    margin-top: 11px;
+    margin-left: 2px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer__wrappper {
     margin: 0 auto;
-    max-width: 979px;
+    width: 940px;
     margin-bottom: 50px;
+
+  }
+
+  .page-footer__logo {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 
   .page-footer__link {
-    margin-left: 19px;
-    margin-right: 236px;
+    margin-top: -8px;
+    margin-right: 255px;
   }
 
   .social__links {
-    margin-top: 0;
-    margin-right: 231px;
+    margin-top: 9px;
+    margin-right: 227px;
   }
 
   .developer {
-    margin-top: 0;
+    margin-top: 8px;
   }
+
   .developer__text {
     font-size: 18px;
-    margin-right: 14px;
+    margin-right: 12px;
   }
 
   .developer__link {
-    margin-top: 15px;
+    margin-top: 11px;
   }
 }
