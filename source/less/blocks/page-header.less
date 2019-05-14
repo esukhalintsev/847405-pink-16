@@ -7,25 +7,35 @@
   line-height: 32px;
   text-align: center;
   background-color: @color-darkblue;
+
+  ul {
+    list-style: none;
+  }
 }
 
 .page-header__logo {
   position: absolute;
-  top: 17px;
-  left: 29px;
+  top: 22px;
+  left: 21px;
   z-index: 1;
   align-self: flex-start;
+  fill: #ffffff;
 
   &--tablet,
   &--desktop {
     display: none;
   }
 
-  &:hover path,
-  &:focus path {
+  &:hover,
+  &:focus {
     fill: @color-red;
   }
+
+  &:active {
+    fill: rgba(#ffffff, 0.3);
+  }
 }
+
 
 .main-nav {
   display: flex;
@@ -35,16 +45,16 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(@color-darkblue, 0.3);
+  background-color: rgba(transparent, 0.3);
   min-height: 66px;
 }
 
 .main-nav__toggle {
-  margin-top: 17px;
-  margin-right: 14px;
+  margin-top: 21px;
+  margin-right: 6px;
   width: 50px;
   height: 24px;
-  background-color: @color-darkblue;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   border: 0;
@@ -52,18 +62,29 @@
   cursor: pointer;
 }
 
+.icon-menu {
+  fill: #ffffff;
+  &:hover,
+  &:focus {
+    fill:@color-red;
+  }
+  &:active {
+    fill:rgba(@color-red, 0.3);
+  }
+}
+
 .main-nav--opened {
   background-color: @color-darkblue;
   position: relative;
 
-  .main-nav__toggle {
-    background-image: url("../img/icon-menu-cross.svg");
+  .icon-menu--burger {
+    display: none;
   }
 }
 
 .main-nav--closed {
-  .main-nav__toggle {
-    background-image: url("../img/icon-menu-burger.svg");
+  .icon-menu--cross {
+    display: none;
   }
 }
 
@@ -74,6 +95,7 @@
 }
 
 .main-nav__list a[href] {
+
   &:hover,
   &:focus {
     color: @color-red;
@@ -92,7 +114,7 @@
   text-transform: uppercase;
 }
 
-.site-list__item {
+.main-nav__item {
   padding-top: 16px;
   padding-bottom: 14px;
   border-bottom: 1px solid #000000;
@@ -154,6 +176,8 @@
   }
 
   .page-header__logo {
+    left: 129px;
+
     &:active path {
       fill: @color-transparent;
     }
@@ -177,8 +201,10 @@
 
   .main-nav__list {
     margin-top: 0;
-    margin-right: 48px;
+    margin-right: 80px;
     flex-direction: row;
+    width: 673px;
+
   }
 
   .main-nav__link {
@@ -187,18 +213,21 @@
   }
 
 
-  .site-list__item {
+  .main-nav__item {
     padding-top: 39px;
     padding-bottom: 39px;
     border: 0;
-    margin-right: 73px;
+
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
 
     &:first-child {
       border: 0;
     }
   }
 
-  .site-list__item--current {
+  .main-nav__item--current {
     user-select: none;
 
     a {

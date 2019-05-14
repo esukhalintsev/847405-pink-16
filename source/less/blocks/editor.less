@@ -1,0 +1,374 @@
+.editor {
+  margin-bottom: 43px;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.editor__wrapper {
+  margin: 0 auto;
+}
+
+.editor__title {
+  text-align: center;
+  margin-right: 5px;
+  line-height: 30px;
+  margin-bottom: 42px;
+}
+
+.editor__title__span {
+  display: block;
+}
+
+.editor__area {
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 40px;
+  background-color: @color-grey;
+  padding-top: 20px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background-color: #000;
+    opacity: .1;
+    bottom: 199px;
+  }
+}
+
+.editor__tools {
+  margin-top: 31px;
+}
+
+.editor__list {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+  margin: auto;
+  width: 208px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.editor__item {
+  position: relative;
+}
+
+.editor__item__button {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+}
+
+.editor__icon {
+  fill: @color-darkblue;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &--active {
+    fill: @color-red;
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+    fill: @color-red;
+  }
+}
+
+.editor__range-controls {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 70px;
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.editor__range__scale {
+  width: 240px;
+  margin: 0 auto;
+  height: 2px;
+  background-color: @color-darkblue;
+}
+
+.editor__range__toggle {
+  cursor: pointer;
+  position: absolute;
+  right: 55px;
+  top: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: @color-grey;
+  border: 2px solid @color-red;
+  border-radius: 50%;
+
+  &:active {
+    background-color: @color-red;
+  }
+}
+
+.editor__button {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  width: 278px;
+  height: 56px;
+  border: 3px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: "Open Sans", "arial", sans-serif;
+
+  &--submit {
+    border: solid @color-red;
+    color: @color-red;
+    margin-bottom: 10px;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      background-color: @color-red;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--cancel {
+    border: solid #000000;
+    opacity: 0.1;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: rgba(#ffffff, 0.3);
+      background-color: rgba(@color-darkblue);
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .editor {
+    margin-bottom: 34px;
+  }
+
+  .editor__title {
+    margin-top: 45px;
+    margin-bottom: 70px;
+    font-size: 18px;
+  }
+
+  .editor__area {
+    padding-top: 56px;
+    padding-bottom: 46px;
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .editor__item__button {
+    width: 27px;
+    height: 27px;
+    margin-right: 10px;
+  }
+
+  .editor__tools {
+    width: 280px;
+    margin-top: 8px;
+  }
+
+  .editor__list {
+    margin-left: 5px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .editor__item {
+    width: 276px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+    position: relative;
+    padding-bottom: 21px;
+    border-bottom: 1px solid @color-gray;
+  }
+
+  .editor__icon {
+    width: 22px;
+    height: 22px;
+    fill: @color-red;
+    opacity: 1;
+
+
+    &--fill {
+      width: 25px;
+      height: 25px;
+    }
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+      margin-left: 5px;
+    }
+  }
+
+  .editor__range-controls {
+    margin-bottom: 0;
+
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
+  }
+
+  .editor__range__scale {
+    width: 202px;
+    position: relative;
+
+  }
+
+  .editor__range__toggle {
+    &--crop {
+      right: 44px;
+    }
+
+    &--fill {
+      left: 24px;
+    }
+
+    &--contrast {
+      left: 95px;
+    }
+  }
+
+  .editor__button {
+    width: 260px;
+    margin-left: 4px;
+
+    &--submit {
+      margin-bottom: 23px;
+    }
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .editor {
+    margin-bottom: 98px;
+  }
+
+  .editor__title {
+    margin-top: 5px;
+    margin-bottom: 66px;
+  }
+
+  .editor__area {
+    width: 940px;
+    padding: 0 80px;
+    padding-top: 57px;
+    padding-bottom: 34px;
+  }
+
+  .editor__tools {
+    margin-top: 0;
+    width: 410px;
+  }
+  .editor__item__button {
+    width:48px;
+    height: 48px;
+    margin-right: 45px;
+  }
+
+  .editor__list {
+    width: 410px;
+    margin-left: 16px;
+    margin-top: -5px;
+    margin-bottom: 132px;
+  }
+
+  .editor__item {
+    margin-bottom: 2px;
+
+    &:last-child {}
+
+    &::after {
+      bottom: -12px;
+      width: 411px;
+      left: 11px
+    }
+  }
+
+  .editor__icon {
+    margin-right: 45px;
+
+    &--crop {
+      width: 49px;
+      height: 49px;
+    }
+
+    &--fill {
+      width: 53px;
+      height: 47px;
+      margin-top: 1px;
+      margin-left: -1px;
+    }
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
+      margin-left: 8px;
+      margin-top: 3px;
+    }
+  }
+
+  .editor__range__scale {
+    width: 288px;
+  }
+
+  .editor__range__toggle {
+    &--crop {
+      left: 72px;
+    }
+
+    &--fill {
+      left: 248px;
+    }
+
+    &--contrast {
+      left: 160px;
+    }
+  }
+
+  .editor__button {
+    width: 183px;
+  margin-left: 20px;
+
+    &--cancel {
+
+    }
+  }
+}

@@ -3,13 +3,22 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="fonts/opensans.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 </head>
 
 <body>
-
   <header class="page-header">
     <a class="page-header__logo">
       <svg class="page-header__logo--mobile" width="74.426" height="22.859">
@@ -23,19 +32,26 @@
       </svg>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
+        <svg class="icon-menu icon-menu--burger" width="50" height="24">
+          <use xlink:href="./img/sprite.svg#icon-menu-burger"></use>
+        </svg>
+        <svg class="icon-menu icon-menu--cross" width="50" height="24">
+          <use xlink:href="./img/sprite.svg#icon-menu-cross"></use>
+        </svg>
+      </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--current">
             <a class="main-nav__link">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
@@ -70,11 +86,12 @@
     </section>
     <section class="features">
       <h2 class="visually-hidden">Возможности приложения</h2>
-      <p class="features__slogan">Устали от серости мегаполиса? </p>
-      <p class="features__slogan features__slogan--answer">
-        Нам есть, что вам <br> предложить!</p>
+      <div class="features__slogan__wrapper">
+        <p class="features__slogan__text">Устали от серости мегаполиса? </p>
+        <p class="features__slogan__text features__slogan__text--answer">
+          Нам есть, что вам <br> предложить!</p>
+      </div>
       <div class="features__wrapper">
-
         <ul class="features__list">
           <li class="features__item features__item--mood">
             <h3 class="features__title">Поднимает настроение</h3>
@@ -91,7 +108,7 @@
             <span class="timer__value">24</span>
           </div>
           <div class="timer__description">
-            <h3 class="timer__title">Эффект на 24 часа!</h3>
+            <h3 class="timer__title">Эффект на&nbsp;24 часа!</h3>
             <p class="timer__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
             <a class="timer__link" href="#">Узнать больше об исследовании</a>
           </div>
@@ -106,10 +123,18 @@
           <p class="comments__job">25 лет, водитель трамвая</p>
           <p class="comments__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
         </blockquote>
-        <div class="comments__toggles slider__toggles">
-          <button class="slider__toggle" type="button"></button>
-          <button class="slider__toggle" type="button"></button>
-          <button class="slider__toggle" type="button"></button>
+        <div class="comments__toggles">
+          <button class="slider__toggle slider__toggle--active slider__toggle--left" type="button">
+            <svg class="slider__icon" width="22" height="41">
+              <use xlink:href="./img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <button class="slider__toggle slider__toggle--right" type="button">
+            <svg class="slider__icon" width="22" height="41">
+              <use xlink:href="./img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <button class="slider__toggle slider__toggle--unseen" type="button"></button>
         </div>
       </div>
     </section>
@@ -117,79 +142,81 @@
       <div class="price__wrapper">
         <h2 class="visually-hidden">Тарифные планы</h2>
         <table class="price__table">
-          <tr>
-            <td class="transparent"> </td>
-            <td class="price__category">
-              <b class="price__title">База</b>
-              <p class="price__value">1,99 USD</p>
-            </td>
-            <td class="price__category">
-              <b class="price__title">Стандарт</b>
-              <p class="price__value">3,99 USD</p>
-            </td>
-            <td class="price__category">
-              <b class="price__title">Анлим</b>
-              <p class="price__value">9,99 USD</p>
-            </td>
-          </tr>
-          <tr>
-            <td class="price__attr">Розовый фильтр</td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-          </tr>
-          <tr>
-            <td class="price__attr">Смайлики</td>
-            <td>
-              <svg width="26.752" height="26.752">
-                <use xlink:href="./img/sprite.svg#icon-no"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-          </tr>
-          <tr>
-            <td class="price__attr">Комментарии</td>
-            <td>
-              <svg width="26.752" height="26.752">
-                <use xlink:href="./img/sprite.svg#icon-no"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="26.752" height="26.752">
-                <use xlink:href="./img/sprite.svg#icon-no"></use>
-              </svg>
-            </td>
-            <td>
-              <svg width="21.698" height="16.09">
-                <use xlink:href="./img/sprite.svg#icon-yes"></use>
-              </svg>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td class="price__table__trasparent-cell price__table__left-cell"> </td>
+              <td class="price__category">
+                <p class="price__title">База</p>
+                <p class="price__value">1,99 USD</p>
+              </td>
+
+              <td class="price__category price__category--popular">
+                <p class="price__title">Стандарт</p>
+                <p class="price__value">3,99 USD</p>
+              </td>
+
+              <td class="price__category">
+                <p class="price__title">Анлим</p>
+                <p class="price__value">9,99 USD</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="price__table__trasparent-cell price__cell">
+                <span class="price__table__category">Розовый фильтр</span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Розовый фильтр</span><span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Розовый фильтр</span><span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Розовый фильтр</span><span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="price__table__trasparent-cell price__cell">
+                <span class="price__table__category">Смайлики</span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Смайлики</span>
+                <span class="price__table__symbol price__table__symbol--no"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Смайлики</span>
+                <span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Смайлики</span>
+                <span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="price__table__trasparent-cell price__cell">
+                <span class="price__table__category">Комментарии</span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Комментарии</span>
+                <span class="price__table__symbol price__table__symbol--no"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Комментарии</span>
+                <span class="price__table__symbol price__table__symbol--no"></span>
+              </td>
+              <td class="price__cell">
+                <span class="price__table__text">Комментарии</span>
+                <span class="price__table__symbol price__table__symbol--yes"></span>
+              </td>
+            </tr>
+
+          </tbody>
         </table>
         <div class="price__toggles slider__toggles">
           <button class="slider__toggle" type="button"></button>
-          <button class="slider__toggle" type="button"></button>
+          <button class="slider__toggle slider__toggle--active" type="button"></button>
           <button class="slider__toggle" type="button"></button>
         </div>
       </div>
@@ -203,51 +230,51 @@
             <b class="contacts__title">Звоните:</b>
             <p class="contacts__text">+7 (812) 555-66-66</p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--write">
             <b class="contacts__title">Пишите:</b>
             <p class="contacts__text contacts__text--email ">mail@htmlacademy.ru</p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--street">
             <b class="contacts__title">Приезжайте в гости:</b>
-            <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+            <p class="contacts__text">ул. Большая Конюшенная,&nbsp;19/8</p>
           </li>
         </ul>
       </div>
-      <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.370645671199!2d30.32056904086148!3d59.93629870266311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631056267101b%3A0xa9be6d127c1fcba1!2z0KbQtdC90YLRgCDQuNGB0LrRg9GB0YHRgtCy0LAg0Lgg0LzRg9C30YvQutC4INCm0JPQn9CRINC40LwuINCSLtCSLiDQnNCw0Y_QutC-0LLRgdC60L7Qs9C-!5e0!3m2!1sru!2sru!4v1554295234414!5m2!1sru!2sru" width="100%" height="250" allowfullscreen></iframe>
+      <div class="contacts__map__wrapper">
+        <iframe class="contacts__map__scheme" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.370645671199!2d30.32056904086148!3d59.93629870266311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631056267101b%3A0xa9be6d127c1fcba1!2z0KbQtdC90YLRgCDQuNGB0LrRg9GB0YHRgtCy0LAg0Lgg0LzRg9C30YvQutC4INCm0JPQn9CRINC40LwuINCSLtCSLiDQnNCw0Y_QutC-0LLRgdC60L7Qs9C-!5e0!3m2!1sru!2sru!4v1554295234414!5m2!1sru!2sru" width="100%" height="250" allowfullscreen></iframe>
+
+      </div>
     </section>
   </main>
   <footer class="page-footer page-footer--index">
     <div class="page-footer__wrappper">
-      <a class="page-footer__logo" href="index.html">
-        <svg width="146.3" height="40.375" viewBox="0 0 146.3 40.375">
-          <g>
-            <path fill="#283645" d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.063 c0,4.86-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.287-1.289,1.287c-0.676,0-1.256-0.58-1.256-1.287L71.874,18.661 L71.874,18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57V29.641 z" />
-            <path fill="#283645" d="M93.603,18.5c0-0.708,0.579-1.288,1.255-1.288c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.287-1.288,1.287c-0.676,0-1.255-0.579-1.255-1.287V18.5z" />
-            <path fill="#283645" d="M102.744,18.532c0-0.676,0.58-1.256,1.256-1.256h0.354c0.58,0,0.935,0.29,1.288,0.74l13.684,17.45V18.468 c0-0.676,0.547-1.256,1.256-1.256c0.676,0,1.225,0.58,1.225,1.256v20.349c0,0.677-0.48,1.19-1.158,1.19h-0.129 c-0.548,0-0.936-0.321-1.318-0.772l-13.976-17.867v17.449c0,0.677-0.547,1.257-1.257,1.257c-0.676,0-1.223-0.58-1.223-1.257V18.532 H102.744z" />
-            <path fill="#283645" d="M128.173,18.5c0-0.708,0.58-1.288,1.257-1.288c0.708,0,1.286,0.58,1.286,1.288v12.331l12.848-13.16 c0.29-0.257,0.579-0.451,0.998-0.451c0.676,0,1.225,0.612,1.225,1.256c0,0.354-0.162,0.644-0.42,0.901l-7.984,7.92l8.564,10.561 c0.225,0.291,0.354,0.547,0.354,0.936c0,0.676-0.577,1.288-1.285,1.288c-0.482,0-0.807-0.259-1.03-0.58l-8.401-10.464l-4.863,4.861 v4.895c0,0.708-0.578,1.288-1.286,1.288c-0.677,0-1.257-0.58-1.257-1.288V18.5H128.173z" />
-          </g>
-          <path fill="#FFFFFF" d="M60.498,28.266" />
-          <path fill="#D22856" d="M60.462,28.016c-0.002-0.009-5.175-21.365-5.175-21.365C54.926,4.303,52.694,0,46.688,0 c-0.829,0-1.5,0.671-1.5,1.5s0.671,1.5,1.5,1.5c4.856,0,5.575,3.729,5.639,4.143l4.767,19.701h-2.073 c-0.742-5.927-5.802-10.531-11.927-10.531s-11.186,4.604-11.927,10.531h-1.82c-0.741-5.927-5.802-10.531-11.927-10.531 S6.235,20.917,5.493,26.844H3.42L8.187,7.143C8.25,6.729,8.97,3,13.826,3c0.829,0,1.5-0.671,1.5-1.5S14.655,0,13.826,0 C7.82,0,5.588,4.303,5.227,6.651c0,0-5.173,21.356-5.175,21.365c-0.266,1.109,0.531,1.826,1.426,1.826 c0.012,0,0.023,0.004,0.036,0.004h3.982c0.741,5.926,5.802,10.53,11.927,10.53s11.185-4.604,11.927-10.53h1.814 c0.742,5.926,5.802,10.53,11.927,10.53s11.186-4.604,11.927-10.53H59c0.012,0,0.023-0.004,0.036-0.004 C59.931,29.842,60.728,29.125,60.462,28.016z M26.315,29.844c-0.715,4.272-4.421,7.531-8.896,7.531s-8.18-3.259-8.896-7.531 c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.715-4.271,4.421-7.531,8.896-7.531s8.18,3.26,8.896,7.531 c0.082,0.489,0.135,0.988,0.135,1.5S26.397,29.355,26.315,29.844z M51.99,29.844c-0.716,4.272-4.421,7.531-8.896,7.531 c-4.475,0-8.181-3.259-8.896-7.531c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.716-4.271,4.421-7.531,8.896-7.531 c4.475,0,8.181,3.26,8.896,7.531c0.082,0.489,0.135,0.988,0.135,1.5S52.072,29.355,51.99,29.844z" />
+      <a class="page-footer__link" href="index.html">
+        <svg class="page-footer__logo page-footer__logo--tablet" width="146.3" height="40.375">
+          <use xlink:href="./img/sprite.svg#footer-logo"></use>
         </svg>
+         <svg class="page-footer__logo page-footer__logo--desktop" width="146.3" height="40.375">
+          <use xlink:href="./img/sprite.svg#desktop-footer-logo"></use>
+        </svg>
+
       </a>
       <ul class="social__links">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#" aria-label="Наш Твиттер">
-            <svg width="17.5" height="14.663">
+          <a class="social__link" href="#" aria-label="Наш Твиттер">
+            <svg class="social__logo" width="17.5" height="14.663">
               <use xlink:href="./img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#" aria-label="Мы в Facebook">
-            <svg width="8.673" height="18.944">
+          <a class="social__link" href="#" aria-label="Мы в Facebook">
+            <svg class="social__logo" width="8.673" height="18.944">
               <use xlink:href="./img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="#" aria-label="Канал YouTube">
-            <svg width="14.64" height="13.96">
+          <a class="social__link" href="#" aria-label="Канал YouTube">
+            <svg class="social__logo" width="14.64" height="13.96">
               <use xlink:href="./img/sprite.svg#icon-youtube"></use>
             </svg>
           </a>
@@ -256,7 +283,7 @@
       <div class="page-footer__developer developer">
         <p class="developer__text">Разработано</p>
         <a class="developer__link" href="https://up.htmlacademy.ru/adaptive/16">
-          <svg width="26.943" height="34.09">
+          <svg class="developer__logo" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
             <use xlink:href="./img/sprite.svg#icon-academy"></use>
           </svg>
         </a>

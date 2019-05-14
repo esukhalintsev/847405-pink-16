@@ -1,0 +1,74 @@
+.slider__toggle {
+  width: 7px;
+  height: 7px;
+  border: none;
+  border-radius: 50%;
+  background-color: @color-darkblue;
+  opacity: 0.3;
+  outline: none;
+  cursor: pointer;
+  &:hover,
+  &:focus{
+    opacity: 0.6;
+  }
+  &:active{
+    opacity: 0.1;
+  }
+
+  &--active {
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    border: solid 3px @color-darkblue;
+    background-color: #ffffff;
+  }
+
+  svg {
+    display: none;
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__toggle {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 22px;
+    height: 41px;
+    border: none;
+    cursor: pointer;
+
+    .slider__icon {
+      display: block;
+      fill: @color-darkblue;
+      opacity: 0.3;
+
+      &:hover,
+      :focus{
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 0.1;
+      }
+    }
+
+    &--left {
+      position: absolute;
+      top: -192px;
+      left: -443px;
+    }
+
+    &--right {
+      position: absolute;
+      top: -192px;
+      right: -439px;
+    }
+
+    &--unseen {
+      display: none;
+    }
+  }
+}

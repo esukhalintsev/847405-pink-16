@@ -1,8 +1,7 @@
-.form {
-  font-family: "Open Sans", "Aria", sans-serif;
-  font-size: 14px;
-  line-height: 30px;
-  color: @color-darkblue;
+.page-form {
+  ul {
+    list-style: none;
+  }
 }
 
 .form__group {
@@ -12,12 +11,15 @@
 .form__title,
 .form__title--request {
   margin: 0 auto;
-  margin-bottom: 34px;
+  margin-bottom: 27px;
   max-width: 276px;
   text-align: center;
+  line-height: 30px;
 }
 
 .form__group__title {
+  position: relative;
+  top: 56px;
   max-width: 247px;
   margin: 0 auto;
   color: @color-red;
@@ -34,43 +36,52 @@
 .contacts-info,
 .emotions-info {
   margin: 0 auto;
-  margin-bottom: 62px;
+  padding: 0;
+  width: 280px;
   border: none;
-  max-width: 86%; //
 }
 
 .personal-info__item,
 .contacts-info__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 17px;
+  margin-bottom: 12px;
 }
 
 .personal-info__label,
 .contacts-info__label {
-  margin-left: 20px;
-  margin-bottom: 5px;
+  margin-left: 22px;
+  margin-bottom: 7px;
   color: @color-red;
   text-transform: uppercase;
 }
 
 .personal-info__label {
-  margin-top: 10px;
+  margin-top: 9px;
 }
 
 .personal-info__input,
 .contacts-info__input {
   height: 63px;
-  padding-top: 4px;
-  padding-left: 18px;
+  padding-left: 20px;
   font-size: 18px;
   border: 2px solid @color-gray;
+  outline: none;
 
   &::placeholder {
     font-family: "Open Sans",
       "Arial",
       sans-serif;
     color: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid @color-darkblue;
+  }
+
+  &:active {
+    border-color: @color-red;
   }
 }
 
@@ -79,8 +90,23 @@
   background-color: @color-grey;
 }
 
+.personal-info {
+  margin-bottom: 14px;
+}
+
+.adventures-info {
+  margin-bottom: 34px;
+  padding-bottom: 0;
+}
+
+.adventures-info__list {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 51px;
+}
+
 .adventures-info__item {
-  margin-bottom: 42px;
+  margin-bottom: 48px;
 }
 
 .adventures-info__title {
@@ -88,23 +114,37 @@
 }
 
 .adventures-info__label {
+  cursor: pointer;
+}
+
+.adventures-info__input + .adventures-info__label {
   position: relative;
   font-size: 18px;
   line-height: 30px;
   display: block;
-  padding: 5px 10px 5px 89px;
+  padding-top: 4px;
+  padding-left: 69px;
 
   &::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-    margin-left: 20px;
     width: 39px;
     height: 39px;
     background-color: #ffffff;
     border: solid 2px #e5e5e5;
+    outline: none;
   }
+}
+
+.adventures-info__input:hover + .adventures-info__label::before,
+.adventures-info__input:focus + .adventures-info__label::before {
+  border: 2px solid @color-darkblue;
+}
+
+.adventures-info__input:active + .adventures-info__label::before {
+  border-color: @color-red;
 }
 
 .adventures-info__input:checked + .adventures-info__label::before {
@@ -114,35 +154,49 @@
 }
 
 .contacts-info {
-  margin-top: 32px;
+  margin-bottom: 4px;
+}
+
+.contacts-info__item {
+  margin-bottom: 21px;
 }
 
 .contacts-info__title {
   display: none;
 }
 
+.apps-info {
+  margin-bottom: 37px;
+  padding-bottom: 0;
+}
+
 .apps-info__title {
-  margin-bottom: 35px;
+  margin-bottom: 85px;
+}
+
+.apps-info__list {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 7px;
 }
 
 .apps-info__item {
   margin-bottom: 35px;
 }
 
-.apps-info__label {
+.apps-info__input + .apps-info__label {
+  cursor: pointer;
   position: relative;
   font-size: 18px;
   line-height: 30px;
   display: block;
-  padding: 5px 10px 5px 89px;
+  padding: 5px 10px 5px 69px;
 
   &::before {
-    //border: none;
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-    margin-left: 20px;
     width: 40px;
     height: 39px;
     border: solid 2px #e5e5e5;
@@ -151,18 +205,26 @@
   }
 }
 
+.apps-info__input:hover + .apps-info__label::before,
+.apps-info__input:focus + .apps-info__label::before {
+  border: 2px solid @color-darkblue;
+}
+
+.apps-info__input:active + .apps-info__label::before {
+  border-color: @color-red;
+}
+
 .apps-info__input:checked + .apps-info__label::before {
   background: url("../img/icon-map-marker.svg") no-repeat;
   background-position: center;
 }
 
 .emotions-info {
-  margin-top: 45px;
-  margin-bottom: 39px;
-  width: 86%;
+  margin-bottom: 43px;
 }
 
 .emotions-info__title {
+  top: 1px;
   margin-bottom: 17px;
 }
 
@@ -174,11 +236,21 @@
   font-size: 18px;
   border: 2px solid @color-gray;
   resize: none;
+  outline: none;
 
   &::placeholder {
     font-family: "Open Sans", "Arial", sans-serif;
     color: inherit;
     line-height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid @color-darkblue;
+  }
+
+  &:active {
+    border-color: @color-red;
   }
 }
 
@@ -194,12 +266,26 @@
   height: 60px;
   font-size: 18px;
   color: #ffffff;
+  cursor: pointer;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   border: 0;
   background-color: @color-green;
+
+  &:hover,
+  &:focus {
+    background-color: @color-darkgreen;
+  }
+
+  &:active {
+    color: @color-transparent;
+  }
+
+  &:disabled {
+    background-color: @color-gray;
+  }
 }
 
 .form__tip {
@@ -223,8 +309,6 @@
   }
 
   .form__group {
-    margin-left: 22px;
-    margin-right: 22px;
     border: 2px solid @color-grey;
     background-color: #ffffff;
   }
@@ -232,26 +316,46 @@
   .personal-info {
     order: 1;
     border: none;
+    margin-bottom: 7px;
   }
 
   .apps-info {
     order: 2;
+    margin-bottom: 76px;
   }
 
   .contacts-info {
     order: 3;
+    margin-bottom: 55px;
   }
 
   .adventures-info {
+    width: 620px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 57px;
     order: 4;
   }
 
   .emotions-info {
+    width: 620px;
+    max-width: 100%;
+    margin: 0 auto;
     order: 5;
+    padding-bottom: 55px;
+    margin-bottom: 63px;
   }
 
   .form__submit__wrapper {
     order: 6;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 84px;
+  }
+
+  .form__title {
+    margin-top: 91px;
   }
 
   .form__title,
@@ -262,26 +366,13 @@
 
     &--request {
       display: block;
-      margin-bottom: 75px;
+      margin-bottom: 70px;
     }
-  }
-
-  .personal-info,
-  .contacts-info,
-  .emotions-info {
-    width: 100%;
-    margin: 0;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .personal-info {
-    margin-bottom: 5px;
   }
 
   .personal-info__item,
   .contacts-info__item {
-    margin-bottom: 51px;
+    margin-bottom: 52px;
   }
 
   .personal-info__item {
@@ -297,6 +388,8 @@
 
   .personal-info__list {
     width: 620px;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .personal-info__input {
@@ -304,26 +397,35 @@
   }
 
   .form__group__title {
+    top: 0;
+    margin-bottom: 39px;
     max-width: 464px;
     padding-left: 38px;
     padding-right: 38px;
   }
 
   .apps-info {
-    margin-bottom: 76px;
+    margin: 0 auto;
+    margin-bottom: 57px;
+    width: 620px;
+    max-width: 100%;
   }
 
-  .apps-info__item {
-    margin-left: 35px;
-    margin-top: 8px;
+  .apps-info__list {
+    margin: 0;
+    margin-left: 47px;
+    padding-bottom: 18px;
   }
 
-  .apps-info__label {
-    padding-left: 80px;
+  .apps-info__input + .apps-info__label {
+    padding-left: 60px;
   }
 
   .contacts-info {
-    margin-bottom: 55px;
+    width: 620px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 57px;
   }
 
   .contacts-info__list {
@@ -344,11 +446,11 @@
 
     &::after {
       content: "";
-      top: 0;
-      right: -1px;
+      top: 2px;
+      right: 2px;
       position: absolute;
-      width: 62px;
-      height: 63px;
+      width: 59px;
+      height: 59px;
       background-color: @color-gray;
       background-repeat: no-repeat;
       background-position: center;
@@ -369,34 +471,26 @@
 
   .contacts-info__input {
     width: 496px;
-    margin: 0 auto;
-    margin-bottom: 11px;
+    margin-bottom: 14px;
+    padding-left: 16px;
   }
 
   .contacts-info__label {
     margin-left: 17px;
   }
 
-  .adventures-info {
-    margin-bottom: 57px;
-  }
-
   .adventures-info__title {
-    margin-bottom: 44px;
+    margin-bottom: 39px;
   }
 
   .adventures-info__list {
+    margin: 0;
     padding-bottom: 5px;
-    padding-left: 37px;
+    margin-left: 47px;
   }
 
-  .adventures-info__label {
-    padding-left: 78px;
-  }
-
-  .emotions-info {
-    padding-bottom: 55px;
-    margin-bottom: 67px;
+  .adventures-info__input + .adventures-info__label {
+    padding-left: 60px;
   }
 
   .emotions-info__title {
@@ -406,16 +500,8 @@
   .emotions-info__textarea {
     margin: 0 auto;
     display: block;
-    margin-left: 60px;
-    margin-right: 60px;
     width: 496px;
-    min-height: 189px;
-  }
-
-  .form__submit__wrapper {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    min-height: 193px;
   }
 
   .form__submit {
@@ -427,46 +513,55 @@
 
   .form__tip {
     margin: 0;
-    margin-right: 20px;
+    margin-top: 4px;
+    margin-right: 19px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form__wrapper {
+    width: 1200px;
+    padding: 0 130px;
+  }
+
   .form__area {
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 82%;
-    margin: 0 auto;
+    justify-content: space-between;
   }
 
   .form__title,
   .form__title--request {
+    margin-top: 92px;
     max-width: 762px;
   }
 
   .form__title--request {
     display: inline-block;
-    margin-bottom: 82px;
+    margin-top: 0;
+    margin-bottom: 83px;
   }
 
   .personal-info {
-    max-width: 40%;
+    max-width: 100%;
+    width: 435px;
     margin: 0;
+    margin-right: 64px;
   }
 
   .personal-info__list {
     margin: 0;
-    margin-left: 18px;
-    width: 439px;
+    max-width: 100%;
+    width: 435px;
   }
 
-  .personal-info__label,
-  .contacts-info__label {
-    margin-left: 3px;
+  .personal-info__input {
+    padding-left: 19px;
+    padding-top: 1px;
   }
 
   .personal-info__item {
-    margin-bottom: 53px;
+    margin-bottom: 55px;
   }
 
   .form__group__title {
@@ -474,14 +569,28 @@
   }
 
   .apps-info {
+    max-width: 100%;
+    width: 435px;
     margin-top: -12px;
-    margin-left: 70px;
-    padding-right: 37px;
+  }
+  .apps-info__title {
+    margin-bottom: 35px;
+  }
+
+  .apps-info__list {
+    margin-left: 25px;
+    padding-bottom: 5px;
   }
 
   .apps-info__item {
-    margin-left: 53px;
-    margin-top: 10px;
+    margin-left: 38px;
+    margin-top: 5px;
+  }
+
+  .contacts-info {
+    width: 940px;
+    max-width: 100%;
+    margin-bottom: 59px;
   }
 
   .contacts-info__list {
@@ -491,8 +600,9 @@
   .contacts-info__input {
     width: 371px;
     padding-top: 0;
-    padding-bottom: 4px;
-    margin-bottom: 7px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    margin-bottom: 11px;
   }
 
   .contacts-info__item {
@@ -509,40 +619,44 @@
   }
 
   .adventures-info {
-    width: 100%;
+    width: 940px;
+    margin-bottom: 57px;
   }
 
   .adventures-info__title {
     max-width: 450px;
+    margin-bottom: 38px;
   }
 
   .adventures-info__list {
+  margin-left: 17px;
     padding: 0;
-    padding-bottom: 12px;
-    padding-left: 40px;
+    padding-left: 27px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 200px;
+    height: 176px;
 
   }
 
   .adventures-info__item {
     width: 290px;
     align-items: center;
+    margin-right: 25px;
 
-    &:not(:last-child) {
-      margin-right: 15px;
+    &:last-child {
+  margin-right: 0;
     }
   }
 
+  .adventures-info__input + .adventures-info__label {
+    padding-left: 61px;
+  }
+
   .emotions-info {
-    width: 100%;
-    padding: 0;
     padding-bottom: 44px;
-    margin: 0;
-    margin: 0 auto;
-    margin-bottom: 65px;
+    margin-bottom: 63px;
+    width: 940px;
   }
 
   .emotions-info__title {
@@ -556,16 +670,17 @@
 
   .form__submit__wrapper {
     width: 100%;
+    margin-bottom: 66px;
   }
 
   .form__submit {
     margin-top: 2px;
-    margin-left: 22px;
+    margin-left: 0;
   }
 
   .form__tip {
     margin-top: 5px;
-    margin-right: 22px;
+    margin-right: 0;
 
     span {
       display: inline-block;
