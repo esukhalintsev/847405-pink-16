@@ -36,7 +36,6 @@
   }
 }
 
-
 .main-nav {
   display: flex;
   flex-direction: column;
@@ -64,12 +63,14 @@
 
 .icon-menu {
   fill: #ffffff;
+
   &:hover,
   &:focus {
-    fill:@color-red;
+    fill: @color-red;
   }
+
   &:active {
-    fill:rgba(@color-red, 0.3);
+    fill: rgba(@color-red, 0.3);
   }
 }
 
@@ -95,7 +96,6 @@
 }
 
 .main-nav__list a[href] {
-
   &:hover,
   &:focus {
     color: @color-red;
@@ -139,8 +139,16 @@
   }
 
   .main-nav--nojs {
+    margin-top: 40px;
+    position: relative;
+    background-color: transparent;
+
     .main-nav__toggle {
       display: none;
+    }
+
+    .main-nav__list {
+      display: block;
     }
   }
 }
@@ -204,7 +212,6 @@
     margin-right: 80px;
     flex-direction: row;
     width: 673px;
-
   }
 
   .main-nav__link {

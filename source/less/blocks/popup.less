@@ -1,6 +1,6 @@
 .popup {
-  box-shadow: 0 5px 15px 3px rgba(0, 0, 0, .15);
-  background-color: #fff;
+  box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
   padding-top: 40px;
   padding-bottom: 50px;
   position: fixed;
@@ -34,7 +34,6 @@
 }
 
 .popup__button-wrap {
-  background-color: red;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: @color-grey;
@@ -62,11 +61,11 @@
   .popup__close {
     margin: 0 auto;
   }
+
   .popup__button-wrap {
     background-color: #ffffff;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .popup {
@@ -77,11 +76,12 @@
       padding-bottom: 0;
     }
   }
+
   .popup__text {
     width: 400px;
   }
+
   .popup__close--accepted {
     width: 456px;
   }
-
 }

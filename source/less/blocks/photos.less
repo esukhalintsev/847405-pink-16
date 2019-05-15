@@ -17,6 +17,8 @@
   margin: 0 auto;
   margin-bottom: 20px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 
   &.photos-day {
     margin: 0;
@@ -122,8 +124,9 @@
       height: auto;
     }
   }
+
   .photos__picture--day {
-    max-width: none
+    max-width: none;
   }
 
   .photos__item {
@@ -146,6 +149,8 @@
 
   .photos__info {
     position: relative;
+    width: 300px;
+    height: 155px;
   }
 
   .photos__author-name {
@@ -187,12 +192,6 @@
     justify-content: space-around;
     flex-wrap: wrap;
   }
-
-  .photos__info {
-    width: 300px;
-    height: 155px;
-  }
-
 }
 
 @media (min-width: @desktop-width) {
@@ -224,8 +223,8 @@
   .photos__list {
     width: 960px;
   }
+
   .photos__item {
     margin-bottom: 54px;
   }
-
 }

@@ -13,6 +13,7 @@
     list-style: none;
   }
 }
+
 .price__wrapper {
   overflow: hidden;
 }
@@ -44,7 +45,6 @@
 
   &--yes,
   &--no {
-
     &::after {
       content: "";
       position: absolute;
@@ -56,7 +56,6 @@
 
   &--yes {
     &::after {
-
       background-image: url("../img/icon-yes-green.svg");
       background-size: 30px;
       width: 30px;
@@ -82,7 +81,6 @@
   margin-top: 39px;
   justify-content: space-between;
   padding-bottom: 48px;
-
 }
 
 .price__category {
@@ -101,14 +99,12 @@
       content: "хит";
       text-transform: uppercase;
       color: #ffffff;
-      font-family: "open sans", "arial", sans-serif;
-
+      font-family: "Open Sans", "Arial", sans-serif;
       position: absolute;
       top: 12px;
       left: 2px;
       width: 40px;
       height: 30px;
-      -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       z-index: 1;
     }
@@ -120,7 +116,7 @@
       left: -3px;
       width: 74px;
       height: 73px;
-      background-image: url(../img/bg-hit.svg);
+      background-image: url("../img/bg-hit.svg");
       background-size: 74px 73px;
     }
   }
@@ -128,10 +124,9 @@
 
 .price__cell {
   position: relative;
-  border: 2px solid #e5e5e5;
+  border: 2px solid @color-gray;
   min-width: 278px;
-  padding: 15px 0px 14px 21px;
-
+  padding: 15px 0 14px 21px;
   text-align: left;
 }
 
@@ -140,7 +135,7 @@
   margin-bottom: 2px;
   font-size: 18px;
   font-weight: bold;
-  font-family: "Open Sans", "arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 .price__value {
@@ -213,7 +208,7 @@
   .price__category--popular {
     &::after {
       left: 0;
-      background: url(../img/bg-hit-tablet.svg) no-repeat;
+      background: url("../img/bg-hit-tablet.svg") no-repeat;
     }
 
     &::before {
@@ -255,10 +250,11 @@
 
   .price__category--popular {
     &::after {
-      background-image: url(../img/bg-hit.svg);
+      background-image: url("../img/bg-hit.svg");
     }
-    &::before{
-      top:11px;
+
+    &::before {
+      top: 11px;
       left: 4px;
     }
   }
@@ -269,6 +265,6 @@
   }
 
   .price__cell {
-    padding: 14px 0px 13px 20px;
+    padding: 14px 0 13px 20px;
   }
 }
