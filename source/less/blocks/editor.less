@@ -42,6 +42,8 @@
 }
 
 .editor__tools {
+  display: flex;
+  flex-direction: column;
   margin-top: 31px;
 }
 
@@ -296,9 +298,12 @@
   .editor__tools {
     margin-top: 0;
     width: 410px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
+
   .editor__item__button {
-    width:48px;
+    width: 48px;
     height: 48px;
     margin-right: 45px;
   }
@@ -312,6 +317,8 @@
 
   .editor__item {
     margin-bottom: 2px;
+    width: auto;
+    height: auto;
 
     &:last-child {}
 
@@ -365,10 +372,6 @@
 
   .editor__button {
     width: 183px;
-  margin-left: 20px;
-
-    &--cancel {
-
-    }
+    margin-left: 20px;
   }
 }

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff" as="font" crossorigin="anonymous">
@@ -15,7 +15,10 @@
   <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="js/svg4everybody.min.js"></script>
-   <script>svg4everybody();</script>
+  <script>
+    svg4everybody();
+
+  </script>
   <script src="js/picturefill.js">
   </script>
 </head>
@@ -226,7 +229,7 @@
               <img src="./img/photo-road-mobile@1x.jpg" alt="Загружамое изображение" srcset="./img/photo-road-mobile@2x.jpg">
             </picture>
           </div>
-          <div class="editor__tools">
+          <form class="editor__tools">
             <ul class="editor__list">
               <li class="editor__item">
                 <button class="editor__item__button">
@@ -272,7 +275,7 @@
             </div>
             <button class="editor__button editor__button--submit">Запостить</button>
             <button class="editor__button editor__button--cancel">Отмена</button>
-          </div>
+          </form>
 
         </div>
       </div>
@@ -321,9 +324,7 @@
   <script>
     var navMain = document.querySelector('.main-nav');
     var navToggle = document.querySelector('.main-nav__toggle');
-
     navMain.classList.remove('main-nav--nojs');
-
     navToggle.addEventListener('click', function() {
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
