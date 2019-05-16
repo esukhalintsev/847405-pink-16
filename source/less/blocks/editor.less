@@ -28,6 +28,9 @@
   background-color: @color-grey;
   padding-top: 20px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &::after {
     position: absolute;
@@ -178,7 +181,7 @@
   .editor__area {
     padding-top: 56px;
     padding-bottom: 46px;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 
     &::after {

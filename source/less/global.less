@@ -61,7 +61,7 @@ html {
 
 body {
   margin: 0 auto;
-  width: 320px;
+  min-width: 320px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   color: @color-darkblue;
@@ -76,16 +76,4 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-@media (min-width: @tablet-width) {
-  body {
-    width: 660px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  body {
-    width: 1200px;
-  }
 }
